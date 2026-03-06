@@ -1,68 +1,204 @@
 Registering as a Person or Business
-Apex Trader Funding offers two main account types: Personal/Business User Accounts and Trading Accounts. Before signing up as a person or business, please read the following information on both account types HERE.
+
+Overview
+Apex Trader Funding offers two main types of user accounts:
 
 Personal User Accounts
-A Personal User Account is created when you first sign up to purchase a subscription or join as an Affiliate (or both). This refers to the Apex Dashboard, where you can find your user profile, which is your account assigned to the email you log in with.
+Business User Accounts
 
-One Account Rule: Each person is allowed to create only ONE Personal User Account for personal use. This account provides access to the trader dashboard, affiliate resources, evaluation purchases, PA account payments, affiliate links, and more.
-Creating a Business User Account: If you wish to trade through a business entity, you may also create a User Account for that business. To set up a Business User Account, you’ll need to provide the business’s EIN, along with potential additional documents to verify the business organization, if required. You are permitted ONE Personal User Account and ONE Business User Account.
-Important: Creating multiple personal or business User Accounts beyond the allowed limits is a violation of Apex Trader Funding’s policy. Any additional accounts will be closed, and any profits or affiliate commissions from those accounts will be forfeited.
-To remain compliant, remember that each person may only have ONE Personal User Account and ONE Business User Account. Accounts cannot be transferred from one APEX login to another APEX Login.
-
-Business Accounts
-If you intend to trade through an LLC or register as a business, you must select this option when you sign up for your evaluation account.
-
-We allow traders to set up a business account as long as the entity is solely owned and controlled by the trader. Eligible U.S. business entities that meet these criteria include Sole Proprietorships, Single-Member LLCs, and S Corporations with a single or sole 80% shareholder or similar international business models.
-
-These entities must have the trader as the sole owner and operator, without any additional members, partners, or shareholders. For verification, traders will need to provide documentation confirming the entity's structure and ownership, such as an operating agreement, Articles of Organization, or a similar official document that reflects sole ownership.
-
-Key Points for Business Accounts:
-
-A Personal User Account cannot be converted to a Business User Account. You must sign up for the evaluation directly under the business for the funded account to be associated with it.
-A Personal User Account cannot be paid out to a Business Bank Account, and vice versa.
-The registered name on a paid or funded account cannot be changed after registration. Double-check that all details are correct before signing up.
-How to Register as a Business or LLC/Corp:
-
-To properly register as a Business/LLC, click on the Sign Up button on the homepage. 
-Then select an account size for the platform that you wish to trade with.
-Please keep in mind:
-
-Creating accounts in an attempt to bypass any account restrictions, including probation standards, live trading environment assessments, or any other special account supervision, is strictly prohibited. Please note that this rule also applies to creating new user accounts within the same household. Any attempt to circumvent this rule will result in the immediate termination of all connected user accounts.
-Once registered as a personal account, it cannot be changed to an LLC or business account later.
-The registered name on your account cannot be changed after setup for both evaluation and funded accounts.
- 
-
-New Registration Steps for Business/LLC Accounts:
+These accounts allow access to the Apex dashboard where traders manage evaluations, Performance Accounts (PA), affiliate tools, and account settings.
 
 
-On the sign-up page, check the box: “Is this user account going to be owned by a company?”
-Enter your Business/Company Name in the provided field.
-Under Designated Trader Information, enter your LEGAL name exactly as it appears on your government-issued ID. This name must also be the same person who owns 80% or more of the business, as stated above.
-Address and Phone Number: Use your business details here.
-Payment: You’ll need to use your business credit card for all evaluations and PA Fees.
+Personal User Accounts
+
+What is a Personal User Account?
+A Personal User Account is created when a user signs up to purchase an evaluation subscription or join the affiliate program.
+
+This account provides access to the Apex dashboard where you can:
+
+- Manage your trading accounts
+- Purchase evaluations
+- Activate Performance Accounts
+- Access affiliate links and resources
+- View account performance data
 
 
- 
+One Personal Account Rule
+Each individual may create only ONE Personal User Account.
 
-If you’d like to maintain both personal and business accounts, please note that the total PA account limit per address across both is 20 PA accounts total.
+Creating multiple personal accounts is a violation of Apex Trader Funding policy.
 
-Policy on Account Ownership and Corporate Eligibility:
+If additional personal accounts are discovered:
 
-Our company strictly accepts single-user accounts for both individuals and corporations.
-For corporate accounts, only the majority shareholder—defined as an individual owning 80% or more of the company—can be the registered trader on the account.
-No other individuals, employees, or shareholders may trade on behalf of the corporation.
-Any change in ownership that results in the majority shareholder holding less than 80% of the company will be considered a violation of this policy. If this occurs, the account will be deemed in breach of our terms and will be forfeited immediately without refund or recourse.
-Shared accounts, multiple-user access, or third-party trading are strictly prohibited.
-This policy ensures compliance, security, and a fair trading environment. If you have any questions, please contact our support team.
- 
+- Those accounts will be closed
+- Any profits or affiliate commissions from those accounts may be forfeited
 
-IMPORTANT NOTES:
 
-- The maximum number of PA accounts for one user is still 20 accounts. This means that you CANNOT have 20 PAs in your personal name and 20 under your business entity.
+Business User Accounts
 
-- Being classified as a "professional" may result in additional exchange fees for you or your entity. For example, fees will be at least $115 per month for just CME professional data. Other additional exchange fees may apply.
+Creating a Business Account
+Traders who wish to trade through a business entity may create a Business User Account.
 
-- Please thoroughly read the terms to see if you qualify as a professional or a non-professional trader status. Note: Most traders/LLCs are not professional traders.
+A Business User Account requires:
 
-Can churches, charities, or non-profits open an account?
-No. Apex accounts are available only to individual and for-profit business customers. Churches, charities, and other non-profit or tax-exempt organizations aren’t eligible to open or maintain accounts. These organizations operate under different legal and financial rules, and our account verification process is designed for individuals and standard business entities.
+- A valid EIN
+- Possible additional documentation verifying the business
+
+
+Allowed Business Structures
+Business accounts must be solely owned and controlled by the trader.
+
+Eligible U.S. business entities include:
+
+- Sole Proprietorships
+- Single-Member LLCs
+- S Corporations with a single majority shareholder (80% or more ownership)
+
+Similar international business structures may also qualify.
+
+
+Ownership Requirement
+The trader must be the sole owner and operator of the business entity.
+
+No additional members, partners, employees, or shareholders may trade on behalf of the business.
+
+Verification documents may include:
+
+- Operating Agreement
+- Articles of Organization
+- Other official ownership documentation
+
+
+User Account Limits
+Each person may have:
+
+- ONE Personal User Account
+- ONE Business User Account
+
+Creating additional accounts beyond these limits violates Apex Trader Funding policies.
+
+
+Account Transfer Rules
+User accounts cannot be transferred from one Apex login to another Apex login.
+
+Account names and ownership details cannot be changed after registration.
+
+
+Business Account Registration Rules
+
+Registering as a Business
+If you intend to trade under a business entity such as an LLC, you must select the business option when signing up for your evaluation.
+
+A Personal User Account cannot later be converted into a Business User Account.
+
+
+Payment Rules
+Personal accounts must use personal bank accounts for payments and payouts.
+
+Business accounts must use business payment methods.
+
+Personal accounts cannot be paid out to business bank accounts, and business accounts cannot be paid out to personal bank accounts.
+
+
+How to Register as a Business
+
+To create a Business User Account:
+
+1. Click the Sign Up button on the Apex Trader Funding homepage
+2. Select the account size and trading platform
+3. On the sign-up page, check the box:
+   "Is this user account going to be owned by a company?"
+4. Enter the Business or Company Name
+5. Under Designated Trader Information, enter your legal name exactly as it appears on your government-issued ID
+6. Use your business address and phone number
+7. Use your business credit card for evaluation purchases and PA activation fees
+
+
+Designated Trader Requirement
+The designated trader must be the majority owner of the company.
+
+This means the trader must own at least 80% of the business entity.
+
+
+Account Restriction Rules
+
+Bypassing Restrictions
+Creating additional user accounts to bypass account restrictions is strictly prohibited.
+
+This includes attempts to bypass:
+
+- Probation restrictions
+- Evaluation restrictions
+- Special trading supervision
+
+
+Household Account Restrictions
+Creating additional user accounts within the same household to bypass restrictions is also prohibited.
+
+Violations may result in termination of all connected user accounts.
+
+
+Performance Account Limits
+
+Maximum PA Limit
+The maximum number of Performance Accounts allowed per user is 20.
+
+This limit applies across both personal and business accounts combined.
+
+Example:
+You cannot have 20 PAs under your personal account and 20 under your business account.
+
+
+Professional Data Status
+
+Professional Classification
+Certain traders or businesses may be classified as professional data users.
+
+Professional traders may be required to pay additional exchange fees.
+
+Example:
+CME professional data fees may be at least $115 per month.
+
+Most traders and LLCs are typically classified as non-professional traders.
+
+
+Account Ownership Policy
+
+Single User Requirement
+All Apex accounts must be single-user accounts.
+
+For corporate accounts:
+
+- The majority shareholder must be the registered trader
+- No other employees or partners may trade on the account
+
+
+Ownership Changes
+If ownership of the company changes and the registered trader no longer owns at least 80% of the business:
+
+- The account will be considered in violation of policy
+- The account may be immediately forfeited without refund
+
+
+Shared Accounts
+Shared accounts, multiple-user access, and third-party trading are strictly prohibited.
+
+
+Eligible Organizations
+
+Who Can Open an Account
+Apex accounts are available to:
+
+- Individual traders
+- For-profit business entities
+
+
+Ineligible Organizations
+The following organizations cannot open Apex accounts:
+
+- Churches
+- Charities
+- Non-profit organizations
+- Tax-exempt organizations
+
+These organizations operate under different legal and financial rules that are not compatible with Apex account verification requirements.
