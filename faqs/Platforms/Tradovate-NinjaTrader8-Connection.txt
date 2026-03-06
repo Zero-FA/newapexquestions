@@ -1,154 +1,208 @@
 Tradovate x NinjaTrader8 Connection Guide
-Setting Up NinjaTrader with Tradovate Accounts
-Visit NinjaTrader’s Website:
 
-Go to ninjatrader.com.
-
-Open an Account:
-
-Click on Open Account.
+Overview
+This guide explains how to install NinjaTrader and connect it to your Tradovate account when trading with Apex Trader Funding.
 
 
+Creating a NinjaTrader Account
+
+Step 1 — Visit NinjaTrader Website
+Go to:
+https://ninjatrader.com
+
+Step 2 — Open an Account
+Click the "Open Account" button.
+
+Step 3 — Enter Email Address
+Enter your email address and submit the form.
+
+NinjaTrader will send an activation link to your email.
 
 
-Provide Your Email:
+Account Activation
 
-Enter your email address.
+Step 4 — Activate Your Account
+Open the email from NinjaTrader and click the activation link.
 
-You will receive an activation link in your inbox.
-
-Activate Your Account: 
-
-Click the activation link in the email.
-
-Note: If you receive a message that your email is already in use, use a different email address to sign up for the risk-free trial and access the NinjaTrader dashboard.
-
-Downloading and Installing NinjaTrader 8.1
-Access the Risk-Free Trial: 
-
-After logging in, click on Try risk-free simulated trading.
-
+Important Note:
+If you receive a message that your email is already in use, sign up again using a different email address in order to access the risk-free trial and NinjaTrader dashboard.
 
 
 
- 
+Downloading NinjaTrader 8.1
 
-Complete the Form:
+Step 5 — Access the Risk-Free Trial
+After logging in to your NinjaTrader dashboard, click:
 
+Try Risk-Free Simulated Trading
+
+Step 6 — Complete the Form
 Fill out the required information.
 
-When prompted to choose between Desktop or Web, you can close the dialog box.
+If prompted to choose between Desktop or Web versions, you may close that dialog box.
+
+Step 7 — Download NinjaTrader
+Scroll to the bottom left of the dashboard and click Download.
+
+Always download the most recent release of NinjaTrader.
 
 
-
-
-Download NinjaTrader:
-
-Click on the Download button located at the bottom left of the dashboard.
-
-Download the Most Recent Release of NinjaTrader.
-
-
-
-
- 
 
 Configuring NinjaTrader Settings
-Access Preferences: 
 
-Click on your profile icon at the top right corner of the NinjaTrader online dashboard.
+Step 8 — Open Account Settings
+Click your profile icon in the top right corner of the NinjaTrader dashboard.
 
-Select Settings.
- 
+Select:
+Settings
 
-Set Symbology Display Style:
+Step 9 — Configure Symbology Display Style
+Navigate to:
 
-Navigate to Preferences.
+Preferences → Symbology Display Style
 
-Under Symbology Display Style, select Numeric.
+Change the display format to:
+
+Numeric
 
 Save the changes.
 
 
 
+Installing NinjaTrader
 
+Step 10 — Run Installer
+Open the installer file you downloaded earlier.
 
- 
+Follow the installation instructions until NinjaTrader finishes installing.
 
-Connecting to Your Tradovate Account in NinjaTrader
-Install NinjaTrader:
-
-Run the installer you downloaded earlier.
-
-Open NinjaTrader after installation.
-
-Log In to NinjaTrader:
-
-Enter the username and password you created for your NinjaTrader online account.
-
-Click Log In.
-
-Note: You will need to enter these credentials each time you start NinjaTrader.
-
-Select Simulation Mode:
-
-If a Live or Simulation dialog box appears, select Simulation.
-
-Apex Trader Funding accounts operate in simulation mode.
-
-Enable Multi-Provider Mode:
-
-In the NinjaTrader Control Center, go to Tools > Options > General.
-
-Check the box labeled Multi-provider.
-
-Click Apply, then OK.
-
-Restart NinjaTrader to apply the changes.
+Step 11 — Launch NinjaTrader
+Open the NinjaTrader desktop application.
 
 
 
+Logging Into NinjaTrader
 
-Configure Connection:
+Step 12 — Enter Credentials
+Log in using the NinjaTrader username and password you created during account setup.
 
-After restarting, go to Connections > Configure.
+Important:
+You must enter these credentials every time you start NinjaTrader.
 
-In the Available list, select NinjaTrader, then click Add.
+
+
+Selecting Simulation Mode
+
+Step 13 — Choose Simulation
+If prompted to choose between Live or Simulation mode, select:
+
+Simulation
+
+Apex Trader Funding accounts operate only in simulation mode.
+
+
+
+Enable Multi-Provider Mode
+
+Step 14 — Enable Multi-Provider
+Inside NinjaTrader Control Center:
+
+Go to:
+Tools → Options → General
+
+Enable the checkbox labeled:
+
+Multi-provider
+
+Click Apply and OK.
+
+Restart NinjaTrader to apply the setting.
+
+
+
+Connecting Tradovate to NinjaTrader
+
+Step 15 — Configure Connection
+After restarting NinjaTrader:
+
+Go to:
+Connections → Configure
+
+In the Available connections list, select:
+
+NinjaTrader
+
+Click Add.
+
+
+Step 16 — Enter Account Credentials
 
 In the Properties section:
 
-Username: Enter your Tradovate username (from Apex Trader Funding dashboard).
+Username:
+Enter your Tradovate username from the Apex Trader Funding dashboard.
 
-Password: Enter your Tradovate password.
+Password:
+Enter your Tradovate password.
 
 Click Apply, then OK.
 
 
 
+Establishing the Connection
+
+Step 17 — Connect to Account
+Go to:
+
+Connections
+
+Select the connection you created (example: My NinjaTrader).
+
+Your Tradovate accounts should now load in NinjaTrader.
 
 
-Establish Connection:
 
-Go to Connections and select the connection you just created (e.g., My NinjaTrader).
-
-Your Tradovate accounts should now load within NinjaTrader.
-
-Note: If you need additional guidance, please refer to any setup videos or resources provided by Apex Trader Funding.
-
- 
-
-Common Error: “Input string was not in a correct format.”
-Issue:
-Encountering the error message: “Input string was not in a correct format.”
-Solution:
-Adjust Symbology Display Style:
-In NinjaTrader, go to Settings.
-Select Preferences.
-Under Symbology Display Style, change the setting to Numeric.
-Save the changes.
-Restart NinjaTrader.
+Common Error Fix
 
 
-If you encounter issues not covered in this guide, consider contacting the help desk of Apex Trader Funding, NinjaTrader, or Tradovate, as appropriate.
+Error Message:
+“Input string was not in a correct format.”
 
-By following this guide, you should now have NinjaTrader 8.1 set up and connected to your Tradovate account, ready for trading. Always ensure that all information is entered correctly and consult official resources or support if you face any difficulties.
+
+Cause
+The Symbology Display Style is not set correctly.
+
+
+Solution
+
+Open NinjaTrader Settings.
+
+Go to:
+Preferences → Symbology Display Style
+
+Change the format to:
+
+Numeric
+
+Save the changes and restart NinjaTrader.
+
+
+
+Troubleshooting
+
+If problems continue after following this guide:
+
+Contact Apex Trader Funding support.
+
+Or contact the platform support teams for:
+
+NinjaTrader
+Tradovate
+
+
+
+Conclusion
+
+After completing these steps, NinjaTrader 8.1 should be successfully installed and connected to your Tradovate account.
+
+You can now trade Apex Trader Funding accounts using NinjaTrader in simulation mode.
