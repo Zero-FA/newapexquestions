@@ -1,52 +1,103 @@
 Intraday Trailing Drawdown Performance Accounts (PA)
-Intraday Trailing PA at a Glance:
-Intraday trailing drawdown enforced in real time
-Trailing stops once Max Trailing Drawdown Amount + $100 is reached
-Daily Loss Limit (DLL) enforced intraday  
-Tier Based Scaling
-100% Payout Split (upon meeting payout eligibility requirements)
-The Intraday Performance Account (PA) is a Simulated Funded (Sim Funded) account awarded after you pass the Intraday Evaluation. It is issued in the same size as the Evaluation account you passed and follows the same Intraday Trailing Drawdown structure. 
+
+Overview
+The Intraday Performance Account (PA) is a Simulated Funded account awarded after passing the Intraday Evaluation.
+
+The Performance Account is issued in the same size as the Evaluation that was passed and follows the same Intraday Trailing Drawdown structure.
+
+
+Intraday Trailing PA at a Glance
+
+Key characteristics:
+
+- Intraday trailing drawdown enforced in real time
+- Trailing stops once Max Trailing Drawdown Amount + $100 is reached
+- Daily Loss Limit (DLL) enforced intraday
+- Tier-based scaling structure
+- 100% payout split after meeting payout eligibility requirements
+
 
 Account Parameters
-Click the links below to a complete guide on each of the parameters of the Intraday Trailing PA account:
 
-Parameters	25K	50K	100K	150K
-Max Drawdown (Intraday Trailing)	$1,000	$2,000	$3,000	$4,000
-Scaling Tier Based	Yes	Yes	Yes	Yes
-Max Contracts	2	4	6	10
-DLL Tier Based	Yes	Yes	Yes	Yes
-Inactivity Rule	Yes	Yes	Yes	Yes
+Account Size: 25K
+Max Drawdown (Intraday Trailing): $1,000
+Scaling Tier Based: Yes
+Max Contracts: 2
+Daily Loss Limit Tier Based: Yes
+Inactivity Rule: Yes
+
+Account Size: 50K
+Max Drawdown (Intraday Trailing): $2,000
+Scaling Tier Based: Yes
+Max Contracts: 4
+Daily Loss Limit Tier Based: Yes
+Inactivity Rule: Yes
+
+Account Size: 100K
+Max Drawdown (Intraday Trailing): $3,000
+Scaling Tier Based: Yes
+Max Contracts: 6
+Daily Loss Limit Tier Based: Yes
+Inactivity Rule: Yes
+
+Account Size: 150K
+Max Drawdown (Intraday Trailing): $4,000
+Scaling Tier Based: Yes
+Max Contracts: 10
+Daily Loss Limit Tier Based: Yes
+Inactivity Rule: Yes
+
+
 Trading Rules
-1. Do Not Breach the Intraday Trailing Drawdown
-Your account balance, including unrealized PnL, may never touch or fall below the Intraday Trailing Drawdown threshold. If it does, all positions are automatically liquidated and the PA is permanently closed.
 
-Intraday Trailing Drawdown Explained
+Rule 1 — Do Not Breach the Intraday Trailing Drawdown
+Your account balance, including unrealized PnL, may never touch or fall below the Intraday Trailing Drawdown threshold.
 
-2. No Prohibited Trading Activity
-All trading must follow Apex Trader Funding risk and conduct guidelines.
+If the threshold is reached:
 
-Engaging in prohibited activities, including hedging violations or any form of rule circumvention, will result in immediate account closure.
+- All open positions are automatically liquidated
+- The Performance Account is permanently closed
 
-Prohibited Activities
+See: Intraday Trailing Drawdown Explained
+
+
+Rule 2 — No Prohibited Trading Activity
+All trading activity must follow Apex Trader Funding risk and conduct guidelines.
+
+Violating the rules, including hedging violations or attempts to circumvent trading policies, will result in immediate account closure.
+
+See: Prohibited Activities
+
 
 Frequently Asked Questions
-How many PAs can I have?
-You may hold up to 20 PAs active at the same time. This cap applies across all PA accounts combined, whether different sizes Legacy, EOD, or Intraday Drawdown.
+
+How many Performance Accounts can I have?
+You may hold up to 20 Performance Accounts at the same time.
+
+This limit applies across all Performance Accounts combined, including different account sizes, Legacy accounts, End-of-Day (EOD) accounts, and Intraday Drawdown accounts.
+
 
 Is the Performance Account a live account?
-No, the Performance Account is a Simulated Funded (Sim Funded) account.
+No. The Performance Account is a Simulated Funded (Sim Funded) trading account.
 
-Does hitting the Daily Loss Limit close my PA?
-No. Hitting the DLL pauses trading for the remainder of the session. The account remains active and resets at the next session open.
+
+Does hitting the Daily Loss Limit close my Performance Account?
+No. Hitting the Daily Loss Limit pauses trading for the remainder of the trading session.
+
+The account remains active and trading resumes at the next session open.
+
 
 Can my position size increase?
-Yes. Position size increases as you move up Scaling Levels based on your End-of-Day balance, up to the account’s maximum level.
+Yes. Position size increases as you progress through scaling tiers based on your End-of-Day balance, up to the maximum contract level allowed for the account.
+
 
 What happens if I violate the Hedging Rule?
-Violation of the Hedging & Correlated Instruments Rule results in immediate Performance Account closure.
+Violation of the Hedging and Correlated Instruments Rule results in immediate closure of the Performance Account.
+
 
 Can my account be closed for inactivity?
-Yes. If you do not record at least one $150 net profit day within 150 consecutive calendar days, the account will be closed.
+Yes. If the account does not record at least one trading day with $150 or more in net profit within 150 consecutive calendar days, the account will be closed due to inactivity.
+
 
 Do I keep 100% of approved payouts?
 Yes. Approved payouts are issued at a 100% payout split once payout eligibility requirements are met.
