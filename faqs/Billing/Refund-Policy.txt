@@ -1,39 +1,85 @@
 Refund Policy
+
+Overview
+Apex Trader Funding does not provide refunds for purchases made through the website. This applies to initial account purchases and optional services. All purchases should be reviewed carefully before completing checkout.
+
+
 General Purchases
-We do not offer refunds, whether in whole or in part, for any purchases made through our website. This applies to initial account purchase and other optional services. 
+Refunds are not offered for any purchases made through the Apex Trader Funding website.
 
-Fees and Add-ons:
-The following optional purchases are non-refundable, so double-check their relevance before buying:
+This includes:
 
-PA Activation Fees: Charged when transitioning from Evaluation to Performance Account.
-Data Fees: Includes Market Depth or extra session logins.
-Ensure these services fit your trading needs to avoid unnecessary expenses.
-Handling Errors
+Initial account purchases
+Optional services
+Add-ons or additional account features
+
+
+Non-Refundable Fees and Add-Ons
+Certain optional services are also non-refundable. These include:
+
+PA Activation Fees
+Charged when transitioning from an Evaluation account to a Performance Account.
+
+Data Fees
+Includes services such as Market Depth or additional session logins.
+
+Before purchasing these services, make sure they fit your trading needs to avoid unnecessary expenses.
+
+
 Technology Issues
+Refunds are not issued for issues related to trading platforms or technical errors.
 
-Refunds are not issued for:
+Examples include:
 
-Platform Errors: Such as delayed order execution.
-Data Errors: Issues with feeds or market depth.
-Stuck Orders: Trades not closing as expected.
-Issues relating to third-party platforms are out of Apex Trader Funding's control. If you encounter these issues, please contact the third-party platform for further guidance.
-What If I Choose the Wrong Plan?
-If you select the wrong plan or service, our policy does not permit refunds. Instead, you may:
+Platform errors such as delayed order execution
+Data feed errors
+Market depth errors
+Orders becoming stuck or not closing properly
 
-Keep the Current Plan: Continue using it until it expires.
-Sign Up for the Correct Plan: Purchase a new account with the plan you intended to select.
-Promotions and Coupon Code
-We do not provide refunds or adjustments for:
-Purchases where a promo code was entered incorrectly or not entered.
-Orders placed outside the valid promotion period or terms
-All promotional offers are time-limited and will not be applied retroactively once expired.
+These issues typically relate to third-party platforms that Apex Trader Funding does not control.
 
-Refund Policies Summary Guide
-Type of Purchase	Refund Eligibility
-Initial Account Fee	No refunds.
-Optional Add-ons	No refunds for services like Market Depth or extra session logins.
-Incorrect Purchases and Technology issues	No refunds for wrong plan selection, platform errors, data errors, or stuck orders
-Steps to Avoid Unwanted Charges
-Thoroughly Review: Visit the FAQ section and descriptions of services before making any purchases.
-Contact The Help Desk: If unsure, contact the Apex Help Desk for clarification before completing a transaction.
-Double-Check Selections: Confirm the plan or service you’re purchasing is accurate during checkout.
+If you experience these problems, contact the third-party platform provider for assistance.
+
+
+Incorrect Plan Selection
+If you purchase the wrong plan or service, refunds are not permitted.
+
+Available options include:
+
+Continue using the purchased plan until it expires
+Purchase the correct plan separately
+
+
+Promotions and Coupon Codes
+Refunds or adjustments are not issued for promotion or coupon code issues.
+
+Examples include:
+
+Entering a promo code incorrectly
+Forgetting to apply a coupon during checkout
+Purchasing outside the valid promotion period
+Promotions that have already expired
+
+Promotional discounts cannot be applied retroactively.
+
+
+Refund Policy Summary
+
+Initial Account Fee
+Refund eligibility: No refunds.
+
+Optional Add-Ons
+Refund eligibility: No refunds for services such as Market Depth or additional session logins.
+
+Incorrect Purchases or Technology Issues
+Refund eligibility: No refunds for selecting the wrong plan, platform errors, data feed issues, or stuck orders.
+
+
+How to Avoid Unwanted Charges
+To prevent purchasing the wrong product or service:
+
+Review the FAQ and product descriptions carefully before purchasing.
+
+Contact the Apex Help Desk if you need clarification before completing a transaction.
+
+Double-check the plan or service you are selecting during checkout to confirm it is correct.
