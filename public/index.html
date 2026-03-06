@@ -164,15 +164,13 @@
       align-items: flex-end;
     }
 
-    .bubble-wrap.assistant {
+    .bubble-wrap.assistant,
+    .bubble-wrap.source {
       align-items: flex-start;
     }
 
     .bubble-wrap.source {
-      align-items: flex-start;
-      align-self: flex-start;
-      width: auto;
-      max-width: 100%;
+      gap: 4px;
     }
 
     .bubble-label {
@@ -210,23 +208,24 @@
     }
 
     .bubble.source {
-      display: inline-block;
-      background: var(--panel3);
-      width: auto;
-      max-width: 100%;
-      min-width: 0;
-      padding: 12px 14px;
-      border-bottom-left-radius: 6px;
-    }
-
-    .source-link {
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      background: var(--panel3);
+      width: auto;
+      min-width: 0;
+      max-width: min(100%, 360px);
+      padding: 10px 14px;
+      border-radius: 14px;
+      border-bottom-left-radius: 6px;
+      line-height: 1.4;
+    }
+
+    .source-link {
+      display: inline-block;
       color: var(--accent);
       text-decoration: none;
       font-weight: 700;
-      line-height: 1.4;
     }
 
     .source-link:hover {
@@ -246,10 +245,6 @@
       .bubble.assistant,
       .bubble.source {
         max-width: 100%;
-      }
-
-      .bubble-wrap.source {
-        width: 100%;
       }
     }
   </style>
@@ -318,8 +313,87 @@
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
+        .replace(/\"/g, "&quot;")
         .replace(/'/g, "&#39;");
+    }
+
+    function normalizeQuestion(value) {
+      return String(value || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function buildQueryVariants(question) {
+      const normalized = normalizeQuestion(question);
+      const typoFixed = normalized
+        .replace(/\bmaen\b/g, "mean")
+        .replace(/\bwaht\b/g, "what")
+        .replace(/\bteh\b/g, "the")
+        .replace(/\btradovte\b/g, "tradovate");
+
+      const variants = new Set();
+
+      if (normalized) variants.add(normalized);
+      if (typoFixed) variants.add(typoFixed);
+
+      if (typoFixed.includes("under review")) {
+        variants.add("under review meaning");
+        variants.add("what does under review mean");
+        variants.add("payout under review");
+        variants.add("review status");
+      }
+
+      const words = typoFixed.split(" ").filter(Boolean);
+      if (words.length > 1) {
+        variants.add(words.join(" "));
+      }
+
+      return Array.from(variants).slice(0, 6);
+    }
+
+    function answerLooksLikeNoMatch(answer) {
+      const text = String(answer || "").toLowerCase();
+      return [
+        "couldn't find",
+        "could not find",
+        "can’t find",
+        "cannot find",
+        "not found",
+        "no matching faq",
+        "no relevant faq",
+        "i don't know",
+        "i do not know",
+        "not sure based on the faq",
+        "not in the faq"
+      ].some((phrase) => text.includes(phrase));
+    }
+
+    function hideSource() {
+      sourceWrap.style.display = "none";
+      sourceBox.innerHTML = "";
+    }
+
+    function showSource(data) {
+      const label = data.sourceTitle || data.sourceFile || data.sourceUrl;
+      if (!label) {
+        hideSource();
+        return;
+      }
+
+      sourceWrap.style.display = "flex";
+
+      if (data.sourceUrl) {
+        sourceBox.innerHTML = `
+          <a class="source-link" href="${escapeHtml(data.sourceUrl)}" target="_blank" rel="noopener noreferrer">
+            ${escapeHtml(label)}
+          </a>
+        `;
+        return;
+      }
+
+      sourceBox.textContent = label;
     }
 
     async function askQuestion() {
@@ -327,8 +401,7 @@
 
       if (!question) {
         answerBox.innerHTML = '<span class="placeholder">Please enter a question first.</span>';
-        sourceWrap.style.display = "none";
-        sourceBox.innerHTML = "";
+        hideSource();
         status.innerHTML = '<span class="warn">No question entered.</span>';
         return;
       }
@@ -340,17 +413,25 @@
 
       answerBtn.disabled = true;
       answerBox.innerHTML = '<span class="placeholder">Thinking...</span>';
-      sourceWrap.style.display = "none";
-      sourceBox.innerHTML = "";
+      hideSource();
       status.textContent = "Sending question...";
 
       try {
+        const queryVariants = buildQueryVariants(question);
+
         const res = await fetch("/api/ask", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify({ question })
+          body: JSON.stringify({
+            question,
+            queryVariants,
+            retrievalMode: "keyword_then_narrow",
+            hideSourceWhenNoMatch: true,
+            preferBestModel: true,
+            preferredModel: "gpt-5"
+          })
         });
 
         const raw = await res.text();
@@ -366,26 +447,20 @@
           throw new Error(data.error || "Request failed");
         }
 
-        answerBox.textContent = data.answer || "No answer returned.";
+        const answerText = data.answer || "No answer returned.";
+        answerBox.textContent = answerText;
 
-        if (data.sourceUrl) {
-          sourceWrap.style.display = "flex";
-          sourceBox.innerHTML = `
-            <a class="source-link" href="${escapeHtml(data.sourceUrl)}" target="_blank" rel="noopener noreferrer">
-              ${escapeHtml(data.sourceTitle || data.sourceFile || data.sourceUrl)}
-            </a>
-          `;
-        } else if (data.sourceTitle || data.sourceFile) {
-          sourceWrap.style.display = "flex";
-          sourceBox.innerHTML = `${escapeHtml(data.sourceTitle || data.sourceFile)}`;
+        if (data.hideSource === true || answerLooksLikeNoMatch(answerText)) {
+          hideSource();
+        } else {
+          showSource(data);
         }
 
         status.innerHTML = '<span class="good">Done.</span>';
       } catch (err) {
         console.error(err);
         answerBox.textContent = "API error: " + err.message;
-        sourceWrap.style.display = "none";
-        sourceBox.innerHTML = "";
+        hideSource();
         status.innerHTML = '<span class="warn">API request failed.</span>';
       } finally {
         answerBtn.disabled = false;
@@ -406,8 +481,7 @@
       userQuestionWrap.style.display = "none";
       userQuestionBox.textContent = "";
       answerBox.innerHTML = '<span class="placeholder">Your answer will appear here.</span>';
-      sourceWrap.style.display = "none";
-      sourceBox.innerHTML = "";
+      hideSource();
       status.textContent = "Ready.";
       questionInput.focus();
     });
