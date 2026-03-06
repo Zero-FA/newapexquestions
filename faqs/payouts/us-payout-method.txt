@@ -1,65 +1,140 @@
 Payout Method: US-Based Users
-If you live in the United States, your payouts will be sent via ACH direct deposit to your US-based bank account. Be sure to use your correct ACH routing number, not a wire transfer number, to avoid delays or rejections.
 
-What You’ll Need
-Before getting started, make sure you have:
+Overview
+If you live in the United States, Apex Trader Funding sends payouts via ACH direct deposit to your US-based bank account.
 
-A US-based checking account
-Your correct ACH routing number (not a wire routing number)
-Your bank account number
-Your Social Security Number or Tax Identification Number
-Step-by-Step Instructions
-1. Log in to Your Apex Dashboard
-
-Go to https://dashboard.apextraderfunding.com/login and log in with your account credentials.
-
-2. Navigate to “Payout Method”
-
-Once logged in, locate and click the Payout Method tab from the menu located on the left side of your dashboard.
+Important:
+You must use your ACH routing number, not a wire transfer routing number. Using the wrong routing number may cause payout delays or rejection.
 
 
+What You Will Need
 
-On the pop-up window, read the information, then keep scrolling to the bottom of that page where you can click the "CHANGE PAYOUT METHOD HERE" link.
+Before setting up your payout method, make sure you have the following information:
 
-3. Complete the Required Personal Information Fields
+• A US-based checking or savings account
+• Your ACH routing number (not a wire routing number)
+• Your bank account number
+• Your Social Security Number (SSN) or Tax Identification Number (TIN)
 
-In the payout method section:
 
-For “US Citizen or US Taxpayer,” select Yes
-Enter your Social Security Number (SSN) or Tax Identification Number (TIN)
-For Payout Type, select Direct Deposit (this is required for all US-based users)
-Choose the correct corresponding account type: Checking or Savings
-Enter your legal First and Last name as it appears on your APEX Profile
-4. Enter Your Bank Information
+Step-by-Step Setup Instructions
 
-Fill in the following fields accurately:
+Step 1 – Log Into Your Apex Dashboard
 
-Bank Name
-ACH Routing Number
-Bank Account Number
-Important: Make sure you enter your ACH routing number, not your wire routing number. They are often different, and using the wrong one will result in delays or payout failure.
+Go to:
+https://dashboard.apextraderfunding.com/login
 
-5. Save Your Details
+Log in using your Apex Trader Funding account credentials.
 
-After confirming your information is accurate, click Save to complete the setup. You’re now ready to request your payout once eligible.
 
-Additional Requirements and Information
+Step 2 – Open the Payout Method Section
+
+After logging in:
+
+• Locate the "Payout Method" tab on the left-side menu
+• Click the tab to open the payout setup window
+
+Scroll to the bottom of the information window and click:
+
+CHANGE PAYOUT METHOD HERE
+
+
+Step 3 – Enter Your Personal Information
+
+Complete the following fields:
+
+US Citizen or US Taxpayer
+Select: YES
+
+Social Security Number / Tax ID
+Enter your SSN or Tax Identification Number
+
+Payout Type
+Select: Direct Deposit
+
+Account Type
+Choose either:
+• Checking
+• Savings
+
+Name Fields
+Enter your legal First and Last name exactly as it appears on your Apex Profile.
+
+
+Step 4 – Enter Your Bank Information
+
+Fill out the following fields carefully:
+
+• Bank Name
+• ACH Routing Number
+• Bank Account Number
+
+Important:
+Make sure the routing number you enter is the ACH routing number, not the wire routing number. Many banks have different numbers for ACH transfers and wire transfers.
+
+Entering the wrong routing number will cause payout delays or rejection.
+
+
+Step 5 – Save Your Information
+
+Once all fields are entered correctly:
+
+• Review the information carefully
+• Click Save
+
+Your payout method is now set up.
+
+You will be able to request payouts once your Performance Account becomes eligible.
+
+
+
 Business Account Payouts
 
-If your Apex user account is registered as a business and you’re requesting payout to a business account instead of a personal account, enter your details using the format below:
+If your Apex account is registered as a business and you want payouts sent to a business bank account, enter your details as follows:
 
-Social Security Number or Tax ID: Enter the business Employer Identification Number (EIN)
-First Name field: Enter the full business name (for example, ABC Business LLC)
-Last Name field: The Last Name field is auto-populated
-Avoid using special characters or symbols in the company name, as this may prevent successful processing.
+Social Security Number / Tax ID
+Enter your business Employer Identification Number (EIN)
 
-Why can't I edit the Last Name in the Payout Method?
-The name field is automatically populated and cannot be edited. If your account was registered as a business (the business checkbox was selected during sign-up), it is already recognized as a business account—even if a personal name appears. To receive payouts under your business, simply enter your business EIN/Tax Number and connect to a matching business bank account.
+First Name Field
+Enter your full business name
+Example:
+ABC Business LLC
 
-Bank Country Must Match Residency
+Last Name Field
+This field will automatically populate and cannot be changed.
 
-To comply with payout rules and avoid rejections, your bank account must be based in the United States, and your Apex account must also list the United States as your country of residence.
+Important:
+Avoid using special characters or symbols in the company name, as they may cause payout processing issues.
 
-If your residency is listed as outside the US, you will not be able to use a US-based bank account for payouts.
 
-Note: Apex cannot provide tax advice. If you have questions about tax filing, forms, or your individual situation, please consult a licensed tax professional. The Help Desk is unable to assist with tax-related inquiries.
+
+Why Can't I Edit the Last Name Field?
+
+The Last Name field is automatically populated and cannot be edited.
+
+If your Apex account was registered as a business (the business option was selected during sign-up), the system already recognizes the account as a business account even if a personal name appears.
+
+To receive payouts under your business:
+
+• Enter your EIN or Tax ID
+• Connect a matching business bank account
+
+
+
+Bank Location Requirements
+
+Your bank account must be located in the United States.
+
+Additionally, your Apex account must list the United States as your country of residence.
+
+If your residency is listed outside the United States, you cannot use a US-based bank account to receive payouts.
+
+
+
+Tax Disclaimer
+
+Apex Trader Funding cannot provide tax advice.
+
+If you have questions regarding tax forms, tax filing, or your individual tax situation, you should consult a licensed tax professional.
+
+The Apex Help Desk cannot assist with tax-related questions.
