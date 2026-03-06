@@ -1,0 +1,38 @@
+Inactivity Policy on Performance Accounts (PA)
+For Intraday and EOD Performance Accounts to remain active, you must record at least 2 trading days with $50 or more in net profit within every rolling 30-day period.
+
+This requirement is measured continuously.
+
+After 15 days of inactivity, the account moves into the dormant phase, and can be found in the Dormant PAs section of your user dashboard: Dormant PAs
+
+A daily notification is sent reminding you that the account is in the dormant phase, and that there is a time limit before the account is permanently closed. 
+
+If 30 consecutive calendar days pass without meeting this activity threshold, the account will be closed due to inactivity.
+
+If a Performance Account is closed due to inactivity:
+
+Access to the account is permanently removed
+
+Any accumulated rewards or payout eligibility are forfeited
+
+Closed accounts cannot be reinstated.
+
+The purpose of this rule is to ensure active participation and consistent engagement with the account.
+
+FAQs
+What does “rolling 30 days” mean?
+The system continuously looks back at the most recent 30 consecutive calendar days.
+
+If within that window there are fewer than 2 qualifying profit days, the account becomes eligible for inactivity closure.
+
+Does placing trades without reaching $50 profit prevent closure?
+No. Trading alone does not prevent inactivity closure. The account must record at least 2 trading days with $50 or more in net profit within each 30-day period.
+
+Does a "breakeven" trading day count?
+No. The day must close with at least $50 in profit to qualify.
+
+Can Inactivity closure be reversed?
+No. Once an account is closed due to inactivity, it cannot be reinstated.
+
+Does this apply to Legacy accounts?
+No. Legacy Performance Accounts follow the previous inactivity policy found here: Legacy PA Inactivity Policy
