@@ -1,46 +1,101 @@
-Setting up Tradovate
-After you have purchased your first Tradovate account and received your Tradovate login credentials, go to the Tradovate welcome page. Use your desktop browser, NOT the app. Sign in with your Tradovate username and password.
+Setting Up Tradovate
 
-Note: Account creation, resets, and Performance Accounts may take longer than expected during times of high volume and market volatility. 
+Overview
+This guide explains how to log into Tradovate and access your Apex Trader Funding accounts after purchasing a Tradovate evaluation or Performance Account.
 
-We appreciate your patience.  If you have not received your account after six hours from the time you ordered your account, please submit a help desk ticket.
-
-Depending on user demand, activating the data may take 10 to 90 minutes after you sign the data agreements. 
-
-Don't send a help desk ticket regarding the lack of live data until at least 90 minutes have elapsed since signing the data agreements.
-
-Login Credentials
+You must use a desktop web browser for the initial login. Do not use the mobile app for the first setup.
 
 
-NOTE: Make sure your username and password do not contain spaces, including at the beginning and end.
+Initial Login
+
+Step 1 — Go to the Tradovate Welcome Page
+After purchasing your Tradovate account and receiving your login credentials, open the Tradovate welcome page in a desktop browser.
+
+Sign in using your Tradovate username and password.
 
 
+Account Creation Timing
 
- 
+Account creation, resets, and Performance Account activation may take longer during periods of high demand or market volatility.
 
-Fill out your information and sign the document. 
+Typical processing time:
 
-Select NON PROFESSIONAL
+Up to 6 hours after ordering your account.
 
-
-
- 
-
-You will find your accounts under the Simulation section. Click Launch.
+If your account has not appeared after 6 hours, submit a help desk ticket.
 
 
+Market Data Activation
 
- 
+After signing the market data agreements, it may take between:
 
-This is your Tradovate dashboard, where you will find your account.
+10 to 90 minutes
+
+for your live data to activate.
+
+Important:
+Do not submit a help desk ticket regarding missing live data until at least 90 minutes have passed after signing the data agreements.
 
 
+Login Credential Requirements
 
- 
+When logging in to Tradovate:
 
-To learn more about the Tradovate Dashboard and how to set up your chart/dashboard, visit their support page HERE.
+Ensure your username and password do not contain spaces.
 
- 
+This includes:
 
-Trading Directly on Tradovate
-After your data is activated, you can trade directly on trader.tradovate.com.
+- No spaces before the username
+- No spaces after the username
+- No spaces before or after the password
+
+
+Account Setup
+
+Step 2 — Complete Required Information
+
+Fill out the required information fields.
+
+Review and sign the required documents.
+
+
+Step 3 — Select Data Classification
+
+When prompted for data classification, select:
+
+NON PROFESSIONAL
+
+
+Accessing Your Tradovate Account
+
+Step 4 — Locate Your Accounts
+
+After completing setup, your Apex accounts will appear under the:
+
+Simulation section
+
+Click Launch to open the account.
+
+
+Tradovate Dashboard
+
+After launching the account, you will see the Tradovate trading dashboard.
+
+This dashboard displays:
+
+- Your trading account
+- Order panels
+- Charting tools
+- Position information
+
+
+Tradovate Platform Help
+
+For detailed instructions on configuring the Tradovate dashboard, charts, and workspace settings, visit the Tradovate support page.
+
+
+Trading on Tradovate
+
+Once market data is activated, you can begin trading directly from the Tradovate web platform:
+
+https://trader.tradovate.com
