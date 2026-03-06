@@ -73,7 +73,7 @@ const FAQ_LINKS = {
     title: "How to Request a Payout",
     url: "https://support.apextraderfunding.com/hc/en-us/articles/46884326359579-How-to-Request-a-Payout"
   },
-    "Evaluation-Plan-Fees-and-Access-Explained.txt": {
+  "Evaluation-Plan-Fees-and-Access-Explained.txt": {
     title: "Evaluation Plan Fees and Access Explained",
     url: "https://support.apextraderfunding.com/hc/en-us/articles/46723099925403-Evaluation-Plan-Fees-and-Access-Explained"
   },
@@ -130,17 +130,17 @@ const FAQ_LINKS = {
     url: "https://support.apextraderfunding.com/hc/en-us/articles/31519503465755-Tradovate-Frequently-Asked-Questions"
   },
   "Rithmic-Commissions-&-Instruments.txt": {
-  title: "Rithmic Commissions & Instruments",
-  url: "https://support.apextraderfunding.com/hc/en-us/articles/31519472976155-Rithmic-Commissions-Instruments"
-},
-"WealthCharts-Commissions-&-Instruments.txt": {
-  title: "WealthCharts Commissions & Instruments",
-  url: "https://support.apextraderfunding.com/hc/en-us/articles/40229823264411-WealthCharts-Commissions-Instruments"
-},
-"Tradovate-Commission-&-Instruments.txt": {
-  title: "Tradovate Commission & Instruments",
-  url: "https://support.apextraderfunding.com/hc/en-us/articles/31519458697243-Tradovate-Commission-Instruments"
-}
+    title: "Rithmic Commissions & Instruments",
+    url: "https://support.apextraderfunding.com/hc/en-us/articles/31519472976155-Rithmic-Commissions-Instruments"
+  },
+  "WealthCharts-Commissions-&-Instruments.txt": {
+    title: "WealthCharts Commissions & Instruments",
+    url: "https://support.apextraderfunding.com/hc/en-us/articles/40229823264411-WealthCharts-Commissions-Instruments"
+  },
+  "Tradovate-Commission-&-Instruments.txt": {
+    title: "Tradovate Commission & Instruments",
+    url: "https://support.apextraderfunding.com/hc/en-us/articles/31519458697243-Tradovate-Commission-Instruments"
+  }
 };
 
 function getAllFiles(dirPath, arrayOfFiles = []) {
@@ -148,7 +148,6 @@ function getAllFiles(dirPath, arrayOfFiles = []) {
 
   files.forEach((file) => {
     const fullPath = path.join(dirPath, file);
-
     if (fs.statSync(fullPath).isDirectory()) {
       getAllFiles(fullPath, arrayOfFiles);
     } else if (file.endsWith(".txt")) {
@@ -159,35 +158,122 @@ function getAllFiles(dirPath, arrayOfFiles = []) {
   return arrayOfFiles;
 }
 
-function loadFaqs() {
+function normalizeQuestion(input) {
+  let q = ` ${input || ""} `;
+
+  const replacements = [
+    [/\btdv\b/gi, " Tradovate "],
+    [/\btradovate\b/gi, " Tradovate "],
+    [/\brith\b/gi, " Rithmic "],
+    [/\brithmic\b/gi, " Rithmic "],
+    [/\bwc\b/gi, " WealthCharts "],
+    [/\bwealth charts\b/gi, " WealthCharts "],
+    [/\bwealthcharts\b/gi, " WealthCharts "],
+    [/\bnt\b/gi, " NinjaTrader "],
+    [/\bnt8\b/gi, " NinjaTrader8 "],
+    [/\bninjatrader\b/gi, " NinjaTrader "],
+    [/\bninjatrader 8\b/gi, " NinjaTrader8 "],
+    [/\bpa\b/gi, " Performance Account "],
+    [/\bpas\b/gi, " Performance Accounts "],
+    [/\beval\b/gi, " Evaluation "],
+    [/\bevals\b/gi, " Evaluations "],
+    [/\b2fa\b/gi, " Two-Factor Authentication "],
+    [/\bach\b/gi, " ACH "],
+    [/\bes\b/gi, " ES E-Mini S&P 500 "],
+    [/\bmes\b/gi, " MES Micro E-Mini S&P 500 "],
+    [/\bnq\b/gi, " NQ E-Mini Nasdaq "],
+    [/\bmnq\b/gi, " MNQ Micro E-Mini Nasdaq "],
+    [/\byt\b/gi, " Treasury Note "],
+    [/\bym\b/gi, " YM E-Mini Dow "],
+    [/\bmym\b/gi, " MYM Micro E-Mini Dow "],
+    [/\brt\b/gi, " round turn "],
+    [/\br\/t\b/gi, " round turn "],
+    [/\beod\b/gi, " End of Day EOD "],
+    [/\bttd\b/gi, " trailing drawdown "],
+    [/\bdd\b/gi, " drawdown "],
+    [/\bunder review\b/gi, " under review payout status "],
+    [/\bpaid\b/gi, " paid payout status "]
+  ];
+
+  for (const [pattern, replacement] of replacements) {
+    q = q.replace(pattern, replacement);
+  }
+
+  return q.replace(/\s+/g, " ").trim();
+}
+
+function tokenize(text) {
+  return String(text || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9&\-\s]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean);
+}
+
+function scoreFile(question, normalizedQuestion, fileName, content) {
+  const haystack = `${fileName}\n${content}\n${normalizedQuestion}`.toLowerCase();
+  const originalTokens = tokenize(question);
+  const normalizedTokens = tokenize(normalizedQuestion);
+  const allTokens = [...new Set([...originalTokens, ...normalizedTokens])];
+
+  let score = 0;
+
+  for (const token of allTokens) {
+    if (token.length < 2) continue;
+    if (haystack.includes(token)) {
+      score += token.length >= 8 ? 5 : token.length >= 5 ? 3 : 1;
+    }
+  }
+
+  if (normalizedQuestion.toLowerCase().includes("tradovate") && /tradovate/i.test(fileName)) score += 20;
+  if (normalizedQuestion.toLowerCase().includes("rithmic") && /rithmic/i.test(fileName)) score += 20;
+  if (normalizedQuestion.toLowerCase().includes("wealthcharts") && /wealthcharts/i.test(fileName)) score += 20;
+  if (normalizedQuestion.toLowerCase().includes("payout") && /payout|request|performance|activation/i.test(fileName)) score += 10;
+  if (normalizedQuestion.toLowerCase().includes("drawdown") && /drawdown/i.test(fileName)) score += 12;
+  if (normalizedQuestion.toLowerCase().includes("commission") && /commission|instruments/i.test(fileName)) score += 15;
+  if (normalizedQuestion.toLowerCase().includes("billing") && /payment|coupon|refund/i.test(fileName)) score += 12;
+  if (normalizedQuestion.toLowerCase().includes("country") && /country/i.test(fileName)) score += 12;
+  if (normalizedQuestion.toLowerCase().includes("register") && /register/i.test(fileName)) score += 12;
+  if (normalizedQuestion.toLowerCase().includes("2 factor") || normalizedQuestion.toLowerCase().includes("two-factor")) {
+    if (/2fa/i.test(fileName)) score += 20;
+  }
+
+  return score;
+}
+
+function loadRankedFaqs(question, normalizedQuestion, maxFiles = 4) {
   const faqDir = path.join(process.cwd(), "faqs");
 
   if (!fs.existsSync(faqDir)) {
     throw new Error(`FAQ folder missing: ${faqDir}`);
   }
 
-  const files = getAllFiles(faqDir);
+  const filePaths = getAllFiles(faqDir);
 
-  if (!files.length) {
+  if (!filePaths.length) {
     throw new Error("No FAQ .txt files found");
   }
 
-  let faqText = "";
-
-  for (const filePath of files) {
+  const ranked = filePaths.map((filePath) => {
     const fileName = path.basename(filePath);
     const content = fs.readFileSync(filePath, "utf8");
+    const score = scoreFile(question, normalizedQuestion, fileName, content);
+    return { filePath, fileName, content, score };
+  });
 
-    faqText += `
+  ranked.sort((a, b) => b.score - a.score);
 
-### FILE: ${fileName}
+  const selected = ranked.slice(0, maxFiles);
+  let faqText = "";
 
-${content}
-
-`;
+  for (const item of selected) {
+    faqText += `\n\n### FILE: ${item.fileName}\n${item.content}\n`;
   }
 
-  return faqText;
+  return {
+    faqText,
+    selectedFiles: selected.map((x) => x.fileName)
+  };
 }
 
 module.exports = async function handler(req, res) {
@@ -204,16 +290,17 @@ module.exports = async function handler(req, res) {
     }
 
     const body = req.body || {};
-    const question = (body.question || "").trim();
+    const rawQuestion = (body.question || "").trim();
 
-    if (!question) {
+    if (!rawQuestion) {
       return res.status(400).json({
         ok: false,
         error: "Missing question"
       });
     }
 
-    const faqText = loadFaqs();
+    const normalizedQuestion = normalizeQuestion(rawQuestion);
+    const { faqText, selectedFiles } = loadRankedFaqs(rawQuestion, normalizedQuestion, 4);
 
     const client = new OpenAI({
       apiKey: process.env.OPENAI_API_KEY
@@ -228,19 +315,19 @@ module.exports = async function handler(req, res) {
           content: [
             {
               type: "input_text",
-              text: `You are an Apex Trader Funding support assistant.
+              text: `You are an Apex Trader Funding FAQ assistant.
 
-Follow these rules strictly:
+Rules:
 1. Answer ONLY using the FAQ documentation provided.
 2. Do NOT use outside knowledge.
-3. Do NOT guess.
-4. If the answer is not clearly in the FAQ say exactly:
+3. Do NOT guess or make unsupported claims.
+4. Treat common abbreviations and shorthand as their full terms when the normalized question makes them clear.
+5. If the answer is not clearly supported by the FAQ docs, say exactly:
 I can't answer that from the provided Apex FAQs.
-5. Match the tone of the user's question.
-6. Keep the answer clear and direct.
-7. After answering, add a final line exactly like:
+6. Keep the answer direct and natural.
+7. After the answer, add one final line exactly like this:
 SourceFile: <filename>
-8. Use only one source file, the single best matching one.`
+8. Use only one source file, the single best matching file from the provided docs.`
             }
           ]
         },
@@ -249,12 +336,17 @@ SourceFile: <filename>
           content: [
             {
               type: "input_text",
-              text: `FAQ DOCUMENTATION:
+              text: `SELECTED FAQ FILES:
+${selectedFiles.join(", ")}
 
+FAQ DOCUMENTATION:
 ${faqText}
 
-USER QUESTION:
-${question}
+ORIGINAL USER QUESTION:
+${rawQuestion}
+
+NORMALIZED QUESTION:
+${normalizedQuestion}
 
 Answer using only the FAQ documentation above.`
             }
@@ -269,10 +361,7 @@ Answer using only the FAQ documentation above.`
 
     const sourceMatch = rawAnswer.match(/SourceFile:\s*(.+)$/im);
     const sourceFile = sourceMatch ? sourceMatch[1].trim() : "";
-
-    const cleanedAnswer = rawAnswer
-      .replace(/SourceFile:\s*.+$/im, "")
-      .trim();
+    const cleanedAnswer = rawAnswer.replace(/SourceFile:\s*.+$/im, "").trim();
 
     const sourceInfo = FAQ_LINKS[sourceFile] || null;
 
@@ -281,7 +370,9 @@ Answer using only the FAQ documentation above.`
       answer: cleanedAnswer,
       sourceFile,
       sourceTitle: sourceInfo ? sourceInfo.title : sourceFile || "",
-      sourceUrl: sourceInfo ? sourceInfo.url : ""
+      sourceUrl: sourceInfo ? sourceInfo.url : "",
+      normalizedQuestion,
+      selectedFiles
     });
   } catch (error) {
     console.error("ASK API ERROR:", error);
