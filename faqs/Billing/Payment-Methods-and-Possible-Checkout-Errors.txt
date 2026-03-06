@@ -1,72 +1,86 @@
 Payment Methods and Possible Checkout Errors
-Important Note
-All purchases must be made using a card that is registered under your own name. Payments made with cards belonging to someone else are not allowed.
+
+Overview
+Apex Trader Funding supports specific payment methods for purchases and account fees. Payments must be made using a card that is registered under your own name.
+
+Cards belonging to another person are not allowed and the transaction may be declined if the cardholder name does not match the purchaser.
+
 
 Accepted Payment Methods
-Apex Trader Funding supports the following payment options for all transactions:
+Apex Trader Funding accepts the following credit and debit cards:
 
-Credit & Debit Cards
 Visa
-
 Mastercard
-
 Discover
 
-Both credit and debit versions of these cards are accepted, as long as they are issued in your name.
+Both credit and debit versions of these cards are supported as long as the card is issued in your name.
+
 
 Unsupported Payment Methods
+The following payment methods are not accepted:
+
 Gift cards
+American Express cards
+Cryptocurrency
 
-American Express cards.
 
-Crypto
+Payment Name Requirement
+All purchases must be made using a card registered in your own name.
 
-These forms of payment are not accepted.
+Payments made with cards belonging to another person are not permitted and may be declined or blocked.
+
 
 Possible Checkout Errors
-Declined or failed payments can happen for a variety of reasons, including bank security measures, incorrect billing details, or retrying the payment too quickly. Below are the most common issues and how to resolve them.
+Payment failures can occur for several reasons including bank security restrictions, incorrect billing information, or retrying the payment too quickly.
+
+Below are the most common checkout issues and how to resolve them.
+
 
 Error 609 — Transaction Blocked by Issuer
-This error usually means that your bank has flagged or blocked the transaction, often for security or fraud-prevention reasons.
+Error 609 typically means that your bank or card issuer has blocked the transaction for security or fraud-prevention reasons.
 
-What to Do
-Contact your bank or card issuer and ask them to approve or authorize the charge.
+How to resolve this:
+
+Contact your bank or card issuer and ask them to approve or authorize the transaction.
 
 Confirm that your card is allowed to process:
 
 Online transactions
-
 International transactions (some banks block these by default)
 
+
 Billing Information Errors
-Even small mismatches in your billing information can cause payments to fail. Make sure the following details match exactly what appears on your bank statement:
+Even small mismatches in billing information can cause a payment to fail.
+
+Make sure the following details match exactly what appears on your bank statement:
 
 Full name
-
 Billing address
-
 Country
+ZIP or postal code
+Card number
+Expiration date
+CVV security code
 
-ZIP/Postal code
-
-Card number, expiration date, and CVV
 
 Retrying the Payment
-After your bank confirms everything is authorized, retry the payment from your Apex Dashboard.
+Once your bank confirms the transaction is authorized, you can retry the payment through your Apex Dashboard.
 
-If the issue continues after contacting your bank, try updating the payment method with a different card to avoid further delays.
+If the payment continues to fail after contacting your bank, try using a different supported card to avoid further delays.
 
-Avoiding Duplicate Payment Errors
-This issue normally appears when:
 
-You attempt the same payment too quickly after a failed attempt.
+Duplicate Payment Errors
+Duplicate payment errors usually occur when the same payment is attempted repeatedly within a short time.
 
-Multiple retries are submitted within a short period of time.
+This typically happens when:
 
-How to Prevent It:
+You attempt another payment immediately after a failed transaction
+Multiple retries are submitted within a short period of time
 
-Wait 2–5 minutes before attempting the payment again.
 
-Refresh your Apex Dashboard before retrying.
+How to Prevent Duplicate Payment Errors
+To avoid duplicate payment errors:
 
-Do not click the checkout button multiple times during the same attempt.
+Wait 2–5 minutes before attempting the payment again
+Refresh your Apex Dashboard before retrying
+Do not click the checkout button multiple times during the same payment attempt
