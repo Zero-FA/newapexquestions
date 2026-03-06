@@ -1,77 +1,179 @@
 Common Questions and Troubleshooting for WealthCharts
-Can WealthCharts notify me if a trade reaches my parameters?
-WealthCharts has the ability to notify you via email, SMS, or in-app notification when an instrument has reached your parameters in a scanner OR if it has reached a certain price level.
 
-Scanner and Price Alerts make trading stress-free, so set up your own conditions and get away from the computer screen so you can get back to doing the things you love!
-
-What contract should I be trading?
-Front-month contracts are determined by the highest open interest in the prior session. To find this, go to https://www.cmegroup.com/markets/products.html#sortAsc.
-
-Once you select your product, select the Volume & OI tab. Verify that you have Futures Quote data selected and not Options Quote data. Look at the Open Interest column to see which contract month has the highest open interest—this will be the front-month contract.
-
- 
+Overview
+This guide answers common questions about the WealthCharts platform, including trading features, system requirements, alerts, and troubleshooting.
 
 
+Notifications and Alerts
 
-Can I create and customize my own indicators?
-With WealthScript, members on WealthCharts have access to a dynamic coding language to create their own custom scripts that they can use to analyze the markets.
+Can WealthCharts notify me when price reaches my parameters?
+Yes. WealthCharts can notify you through:
 
-If you are not a coder, fret not! Take advantage of WealthScript Visual Builder to drag and drop pieces together to create your masterpiece!
+- Email
+- SMS
+- In-app notifications
 
-Can I trade on WealthCharts, or is it analysis only?
-You can absolutely trade directly off of WealthCharts! You can pull up an order panel with a DOM attached, trade directly off of a chart, or utilize our options trading platform as well.
+Alerts can be triggered when:
 
-Place custom stop orders and more with our innovative Trading DOM!
+- A scanner condition is met
+- A specific price level is reached
 
-Do I have to download WealthCharts?
-WealthCharts is not a downloadable platform. It is web-based and can be accessed anywhere!
+Scanner alerts and price alerts allow traders to step away from the screen while still being notified when trading conditions occur.
 
-Did you travel to the other side of the country and forget your laptop? No worries! Download our official mobile app from the Apple App Store or Google Play Store to take your favorite platform on the go.
 
-Does the hotel have a computer? Simply log into your WealthCharts account online!
+Contracts and Futures Selection
 
-Do you have customer support if I have questions?
-For all your Wealth Charts questions, you can reach out to Wealth Charts support either by phone or email.
+What contract should I trade?
+Front-month futures contracts are determined by the highest open interest from the prior trading session.
 
-Phone: 262-299-6200
-Email support@wealthcharts.com
+To identify the front-month contract:
+
+1. Visit https://www.cmegroup.com/markets/products.html#sortAsc
+2. Select the desired futures product
+3. Click the “Volume & OI” tab
+4. Ensure “Futures Quote” data is selected (not Options Quote)
+5. Check the Open Interest column
+
+The contract month with the highest open interest is considered the front-month contract.
+
+
+Indicators and Custom Tools
+
+Can I create custom indicators in WealthCharts?
+Yes. WealthCharts includes a scripting language called WealthScript that allows users to build custom indicators and analysis tools.
+
+If you do not write code, you can use the WealthScript Visual Builder to create custom tools using a drag-and-drop interface.
+
+
+Trading on WealthCharts
+
+Can I trade directly on WealthCharts?
+Yes. WealthCharts supports direct trading through multiple interfaces including:
+
+- Chart trading
+- Order panels
+- DOM (Depth of Market) trading
+- Options trading tools
+
+Traders can also place custom stop orders and manage trades directly from charts.
+
+
+Platform Installation
+
+Do I need to download WealthCharts?
+No. WealthCharts is a web-based platform.
+
+It can be accessed through a web browser from any computer.
+
+If you are away from your main computer, you can:
+
+- Log in from another computer through a browser
+- Use the WealthCharts mobile app available on Apple App Store and Google Play
+
+
+Operating System Compatibility
+
 Does WealthCharts work on Windows and Mac?
-Since WealthCharts is web-based, it can work on Windows AND Mac computers! Just be sure that your web browser is up to date with the latest version for best practices.
+Yes. Because WealthCharts is web-based, it works on both Windows and Mac computers.
 
-Does WealthCharts offer Paper Trading?
-WealthCharts offers its own paper trading system! Allowing you to paper trade the markets in real time WITHOUT needing to have an account with any of our integrated brokers.
+For best performance, make sure your browser is updated to the latest version.
 
-Did you know that you can also use our Trading Simulator and Chart Replay features to test your technical analysis skills with previous market data? Check out the related articles below to learn more about these popular features!
 
-Let WealthCharts sharpen your technical analysis skills to a point before you risk a dime of your money!
+Paper Trading
+
+Does WealthCharts offer paper trading?
+Yes. WealthCharts provides its own paper trading system.
+
+This allows traders to simulate trades in real-time without connecting to a broker.
+
+WealthCharts also offers additional practice tools including:
+
+- Trading Simulator
+- Chart Replay for historical market data
+
+These tools help traders practice strategies before trading live.
+
+
+System Requirements
 
 What are the computer requirements for WealthCharts?
-While WealthCharts can be used on Windows and Mac computers, it can also be used on any web browser. However, we do have our preferences!
+WealthCharts runs inside a web browser.
 
-To see WealthCharts perform its best, please make sure your web browser is on the latest update and consider using Google Chrome or Microsoft Edge!
+For best performance:
 
-WealthCharts Charts
-WealthCharts prides itself on providing cutting-edge charting solutions tailored to meet the diverse needs of traders across the spectrum. Whether you're a seasoned professional or just starting out, our advanced charts offer unparalleled precision, flexibility, and insights to help you navigate the complexities of the market with confidence. With WealthCharts, empower your trading journey and unlock the potential for success like never before.
-
-Their charts can offer over 5 different chart styles, over 30 different drawing tools, custom timeframes, unlimited Chart Templates for any design, price alerts, on-chart trading, and over 200 technical indicators!
-
-Where can I get help understanding how to use the WealthCharts platform?
-If you need any assistance with the WealthCharts platform, their team is available for any questions, feedback, or insights from 9 am ET to 5 pm ET, Monday through Friday! Join the support room by clicking this icon in the upper right-hand corner of the platform:
+- Use the latest version of your browser
+- Recommended browsers include Google Chrome and Microsoft Edge
 
 
+WealthCharts Charting Features
 
+WealthCharts provides advanced charting tools including:
+
+- More than 5 chart styles
+- Over 30 drawing tools
+- Custom timeframes
+- Unlimited chart templates
+- Price alerts
+- On-chart trading
+- Over 200 technical indicators
+
+These tools allow traders to customize their analysis environment.
+
+
+Platform Help and Support
+
+Where can I get help using WealthCharts?
+WealthCharts support is available Monday through Friday from 9:00 AM ET to 5:00 PM ET.
+
+Support can be contacted through:
+
+Phone: 262-299-6200  
+Email: support@wealthcharts.com
+
+Users can also join the live support room inside the platform.
+
+
+Additional WealthCharts Resources
+
+Apex WealthCharts Login Guide
 https://www.wealthcharts.com/kb/category/brokers-and-trading/apex-trader-funding/Logging-into-your-Apex-Trader-Funding-account/
 
-Can I convert my passed WealthCharts eval into Rithmic/TDV PA?
-Unfortunately, no. WealthCharts evaluations that have been passed can only be converted into WealthCharts Performance Accounts (PA). If you wish to have a Tradovate or Rithmic PA, you would need to purchase and successfully pass a corresponding evaluation for that specific platform.
 
-What if I don’t remember my WC credentials?
-If you have lost your password for WealthCharts, make sure you visit https://app.wealthcharts.com/login and simply use the “Request One-Time Password” feature on that page. A One-Time Password will be emailed to you that you can use to log in and set a new password.
+Platform Compatibility
 
-I don’t understand or am having issues with the Trade Copier
-Log in to your WC Dashboard and find your Trade Copier Panel. Find the icon shown below on your Trade Copier panel. WealthCharts has done a great job in providing a brief yet thorough video tutorial on how the Trade Copier works. Further questions on the Trade Copier can be asked in their Live Training room.
+Can I convert a WealthCharts evaluation into a Tradovate or Rithmic Performance Account?
+No. WealthCharts evaluations can only be converted into WealthCharts Performance Accounts.
 
+If you want a Tradovate or Rithmic Performance Account, you must pass the evaluation for that specific platform.
 
 
-Trying to reset your WC password and not getting an email?
-There’s a chance that in the process of unsubscribing from their email list, customers also unsubscribed from password reset emails.  Please have them reach out to support@wealthcharts.com - Subject: Password Reset.
+Account Login Issues
+
+What if I forgot my WealthCharts password?
+Visit the login page:
+
+https://app.wealthcharts.com/login
+
+Use the “Request One-Time Password” option.
+
+A one-time password will be sent to your email which allows you to log in and set a new password.
+
+
+Trade Copier Help
+
+I am having issues with the Trade Copier
+Log in to the WealthCharts dashboard and locate the Trade Copier Panel.
+
+Inside the panel there is a tutorial icon which opens a video explaining how the Trade Copier works.
+
+Additional questions about the Trade Copier can be asked in the WealthCharts Live Training room.
+
+
+Password Reset Email Not Received
+
+If you request a password reset but do not receive an email, it may be because your email address was unsubscribed from their mailing list.
+
+To resolve this, contact WealthCharts support directly:
+
+Email: support@wealthcharts.com  
+Subject line: Password Reset
