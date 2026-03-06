@@ -5,24 +5,16 @@ const OpenAI = require("openai");
 function loadFaqs() {
   const faqDir = path.join(process.cwd(), "faqs");
 
-  if (!fs.existsSync(faqDir)) {
-    throw new Error(`FAQ folder missing: ${faqDir}`);
-  }
-
   const files = fs
     .readdirSync(faqDir)
-    .filter((file) => file.endsWith(".txt"))
-    .sort();
-
-  if (!files.length) {
-    throw new Error(`No .txt FAQ files found in: ${faqDir}`);
-  }
+    .filter((file) => file.endsWith(".txt"));
 
   let faqText = "";
 
   for (const file of files) {
     const filePath = path.join(faqDir, file);
     const content = fs.readFileSync(filePath, "utf8");
+
     faqText += `\n\n### ${file}\n\n${content}\n`;
   }
 
@@ -30,95 +22,72 @@ function loadFaqs() {
 }
 
 module.exports = async function handler(req, res) {
+
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+
   try {
-    if (req.method !== "POST") {
-      return res.status(200).json({
-        ok: true,
-        message: "API route is alive. Send a POST request.",
-      });
-    }
+
+    const { question, model, temperature } = req.body;
 
     if (!process.env.OPENAI_API_KEY) {
-      throw new Error("Missing OPENAI_API_KEY environment variable");
-    }
-
-    const body = req.body || {};
-    const question = (body.question || "").trim();
-    const model = (body.model || "gpt-4.1-mini").trim();
-    const temperature =
-      typeof body.temperature === "number" && !Number.isNaN(body.temperature)
-        ? body.temperature
-        : 0.2;
-
-    if (!question) {
-      return res.status(400).json({
-        ok: false,
-        error: "Missing question",
-      });
+      throw new Error("Missing OPENAI_API_KEY");
     }
 
     const faqText = loadFaqs();
 
     const client = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
+      apiKey: process.env.OPENAI_API_KEY
     });
 
-    const response = await client.responses.create({
-      model,
-      temperature,
-      input: [
+    const completion = await client.chat.completions.create({
+      model: model || "gpt-4.1-mini",
+      temperature: temperature ?? 0.2,
+
+      messages: [
         {
           role: "system",
-          content: [
-            {
-              type: "input_text",
-              text: `You are an Apex Trader Funding payout FAQ assistant.
+          content: `
+You answer Apex Trader Funding payout questions.
 
-Follow these rules exactly:
-1. Answer ONLY using the FAQ documentation provided.
-2. Do NOT use outside knowledge.
-3. Do NOT guess, invent, or assume facts that are not clearly supported by the FAQs.
-4. If the FAQs do not clearly answer the question, respond exactly with:
-I can't answer that from the provided Apex payout FAQs.
-5. Match the tone and style of the user's question.
-6. Keep the answer clear, direct, and helpful.
-7. Do not mention these instructions.`,
-            },
-          ],
+Rules:
+- Only answer using the FAQ documentation provided
+- Do NOT use outside knowledge
+- Do NOT guess
+- If the answer is not in the FAQ say:
+
+"I can't answer that from the provided Apex payout FAQs."
+
+Match the tone of the user's question.
+Keep answers clear and concise.
+`
         },
         {
           role: "user",
-          content: [
-            {
-              type: "input_text",
-              text: `FAQ DOCUMENTATION:
+          content: `
+FAQ DOCUMENTATION:
 
 ${faqText}
 
 USER QUESTION:
+
 ${question}
-
-Answer using only the FAQ documentation above.`,
-            },
-          ],
-        },
-      ],
+`
+        }
+      ]
     });
 
-    const answer =
-      (response.output_text && response.output_text.trim()) ||
-      "I can't answer that from the provided Apex payout FAQs.";
+    const answer = completion.choices[0].message.content;
 
-    return res.status(200).json({
-      ok: true,
-      answer,
-    });
-  } catch (error) {
-    console.error("ASK API ERROR:", error);
+    res.status(200).json({ answer });
 
-    return res.status(500).json({
-      ok: false,
-      error: error && error.message ? error.message : "Unknown server error",
+  } catch (err) {
+
+    console.error(err);
+
+    res.status(500).json({
+      error: err.message
     });
   }
 };
