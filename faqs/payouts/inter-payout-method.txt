@@ -1,52 +1,129 @@
 Payout Method: International Users
-If you live outside the United States, your payouts will be sent through Plane, a secure international payment platform. Once your first payout request is approved, you will receive an email invitation from Plane to link your local bank account. Be sure to check your spam or junk folder if the email doesn’t arrive within a few days.
 
-What You’ll Need
-Before getting started, make sure you have:
+Overview
+If you live outside the United States, Apex Trader Funding sends payouts through Plane, a secure international payment platform.
 
-A local bank account in your country of residence
-A government-issued ID or Passport
-Email address (Must be the one used to log in to your Apex Dashboard)
-Step-by-Step Instructions
-1. Log in to Your Apex Dashboard
+Once your first payout request is approved, you will receive an email invitation from Plane to connect your local bank account.
 
-Go to https://dashboard.apextraderfunding.com/login and log in with your account credentials.
-
-2. Navigate to “Payout Method”
-
-Once logged in, locate and click the Payout Method tab from the menu located on the left side of your dashboard.
+If you do not see the email, check your spam or junk folder.
 
 
+What You Need Before Starting
 
-On the pop-up window, read the information, then keep scrolling to the bottom of that page where you can click the "CHANGE PAYOUT METHOD HERE" link.
+Before setting up your payout method, make sure you have the following:
 
-3. Complete the Required Personal Information Fields
+• A local bank account in your country of residence  
+• A valid government-issued ID or passport  
+• The email address used to log into your Apex Trader Funding dashboard
 
-In the payout method section:
 
-For “US Citizen or US Taxpayer,” select No
-Enter your Government ID Number or Passport Number
-For Payout Type, select International (this is required for all International users)
-Enter your legal First and Last name as it appears on your APEX Profile
-Avoid using special characters or symbols in the name, as this may prevent successful processing.
-Enter your email address
-4. Save Your Details
+Step-by-Step Setup Instructions
 
-After confirming all information is accurate, click Save to complete your payout method setup.
 
-After your first payout request is approved, you will receive an invitation email from Plane within 1 to 4 business days. Follow the link in that email to set up your Plane profile and link your local bank account. You’ll be ready to receive payouts once your Plane account is linked and active.
+Step 1 — Log Into Your Apex Dashboard
 
-If you do not see the email, check your spam or junk folder. Do not submit a Help Desk ticket unless more than 5 business days have passed without receiving the email.
+Go to:
 
-Additional Requirements and Information
-Bank Country Must Match Residency
+https://dashboard.apextraderfunding.com/login
 
-Your bank account must be located in the same country as your declared residency in Apex. For example, if you live in Spain, your bank account must also be based in Spain.
+Log in using your Apex account credentials.
 
-Requests using a bank account from a different country than your country of residence will be rejected. Be sure to update your payout method accordingly if needed.
+
+Step 2 — Open the Payout Method Page
+
+From the left-hand dashboard menu, click:
+
+Payout Method
+
+A popup window will appear with instructions.
+
+Scroll to the bottom of the page and click:
+
+"CHANGE PAYOUT METHOD HERE"
+
+
+Step 3 — Enter Required Personal Information
+
+Fill out the payout method form with the following details:
+
+US Citizen or US Taxpayer  
+Select: No
+
+Government ID Number  
+Enter your Government ID or Passport number.
+
+Payout Type  
+Select: International
+
+Name Fields  
+Enter your legal first and last name exactly as shown on your Apex profile.
+
+Important:
+Avoid using special characters or symbols in your name, as this may prevent successful payment processing.
+
+Email Address  
+Enter the same email address used to log into your Apex dashboard.
+
+
+Step 4 — Save Your Information
+
+After confirming all information is correct, click:
+
+Save
+
+This completes your payout method setup.
+
+
+Plane Account Invitation
+
+After your first payout request is approved:
+
+You will receive an email invitation from Plane within 1 to 4 business days.
+
+Use the link in that email to:
+
+• Create your Plane account
+• Link your local bank account
+
+Once your Plane account is active and linked to your bank, payouts can be processed.
+
+
+Missing Plane Email
+
+If you do not receive the Plane invitation email:
+
+• Check your spam or junk folder.
+
+Do not submit a Help Desk ticket unless more than:
+
+5 business days
+
+have passed without receiving the email.
+
+
+Bank Account Requirements
+
+Your bank account must be located in the same country as your declared residency.
+
+Example:
+
+If you live in Spain, your bank account must also be located in Spain.
+
+If the bank country does not match your declared residency, the payout request will be rejected.
+
+Update your payout method information if necessary before submitting payout requests.
+
 
 Tax Information for International Users
 
-Apex does not issue tax forms to non-US users
-You are responsible for reporting your earnings according to the laws in your country
-Note: Apex cannot provide tax advice. If you have questions about local tax requirements, please consult a qualified tax advisor. The Help Desk is unable to assist with tax-related inquiries.
+Apex Trader Funding does not issue tax forms to non-US traders.
+
+You are responsible for reporting your earnings according to the tax laws in your country of residence.
+
+Important:
+
+Apex Trader Funding cannot provide tax advice.
+
+If you have questions about taxes, consult a qualified tax advisor.
+
+The Apex Help Desk cannot assist with tax-related questions.
