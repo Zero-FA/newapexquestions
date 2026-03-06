@@ -1,84 +1,147 @@
 Intraday Trailing Drawdown Evaluations
-Intraday Evaluation at a Glance:
-Real-time intraday trailing drawdown follows Peak Balance and never moves down
-No Daily Loss Limit
-Fixed position size during evaluation  
-No minimum trading days required, may pass in one trading day  
-7 calendar days to activate PA after passing
-The Intraday Drawdown Evaluation is a 30‑day assessment designed to measure profitability and risk management under a real‑time intraday trailing drawdown model.
 
-The Intraday Trailing Threshold moves dynamically with your account’s highest balance (Peak Balance), including unrealized gains. It is enforced intraday at all times.
+Overview
+The Intraday Trailing Drawdown Evaluation is a 30-day assessment designed to measure profitability and risk management using a real-time intraday trailing drawdown model.
 
- 	25K	50K	100K	150K
-Profit Target	$1,500	$3,000	$6,000	$9,000
-Max Drawdown (Intraday Trailing)	$1,000	$2,000	$3,000	$4,000
-Max Contracts	4	6	8	12
-Access Period	30 Days	30 Days	30 Days	30 Days
-Consistency	Not Applied	Not Applied	Not Applied	Not Applied
-Scaling	Not Applied	Not Applied	Not Applied	Not Applied
+The Intraday Trailing Threshold moves dynamically based on the highest account balance reached (Peak Balance), including unrealized gains. It is enforced continuously during the trading session.
+
+
+Intraday Evaluation at a Glance
+
+Key characteristics of the Intraday Evaluation:
+
+- Real-time intraday trailing drawdown follows the Peak Balance
+- The trailing threshold never moves downward
+- No Daily Loss Limit (DLL)
+- Fixed position size during the evaluation
+- No minimum trading days required
+- The evaluation can be passed in one trading day
+- Traders have 7 calendar days to activate a Performance Account after passing
+
+
+Account Parameters
+
+Account Size: 25K
+Profit Target: $1,500
+Max Drawdown (Intraday Trailing): $1,000
+Max Contracts: 4
+Access Period: 30 Days
+Consistency Rule: Not applied
+Scaling: Not applied
+
+Account Size: 50K
+Profit Target: $3,000
+Max Drawdown (Intraday Trailing): $2,000
+Max Contracts: 6
+Access Period: 30 Days
+Consistency Rule: Not applied
+Scaling: Not applied
+
+Account Size: 100K
+Profit Target: $6,000
+Max Drawdown (Intraday Trailing): $3,000
+Max Contracts: 8
+Access Period: 30 Days
+Consistency Rule: Not applied
+Scaling: Not applied
+
+Account Size: 150K
+Profit Target: $9,000
+Max Drawdown (Intraday Trailing): $4,000
+Max Contracts: 12
+Access Period: 30 Days
+Consistency Rule: Not applied
+Scaling: Not applied
+
+
 Passing the Evaluation
-To successfully pass an Intraday Evaluation, traders must demonstrate profitability and compliance with the Intraday Trailing Drawdown rules. The evaluation confirms traders can manage risk and build profit under the same Intraday Trailing structure they will encounter in their funded Performance Account (PA), before additional scaling and consistency rules are introduced.
 
-To pass an evaluation, you must:
+To pass the Intraday Evaluation, traders must:
 
-Reach the profit target
-Not breach the Intraday Trailing Drawdown at any point
-There is no minimum number of trading days required. You may pass as soon as the profit target is reached, provided all rules are respected.
+- Reach the profit target
+- Avoid breaching the Intraday Trailing Drawdown
 
-Once passed, you will have 7 calendar days to activate your corresponding Intraday Drawdown Performance Account (PA).
+There is no minimum trading day requirement. The evaluation can be passed as soon as the profit target is reached and all rules are respected.
 
-How to Activate Your Performance Account
+Once the evaluation is passed, the trader has 7 calendar days to activate the corresponding Intraday Drawdown Performance Account (PA).
 
-Trading Rules 
-All rules below apply throughout the evaluation period.
 
-1. Do Not Breach the Intraday Trailing Drawdown
-The Intraday Trailing Threshold defines the lowest allowable account balance at any moment during the trading session. The threshold moves in real time based on the account’s highest achieved balance (Peak Balance) and never moves downward.
+Trading Rules
 
-If at any moment during the session the account balance touches or falls below the Trailing Threshold, all open positions are automatically liquidated and the evaluation is immediately failed.
+Rule 1 — Do Not Breach the Intraday Trailing Drawdown
+The Intraday Trailing Threshold defines the lowest allowed account balance at any time during the trading session.
 
-Because liquidation occurs at market price, the final filled balance may be slightly above or below the Trailing Threshold depending on market conditions at the time of execution. This does not change the fact that the threshold was breached and the account is considered failed.
+The threshold moves upward in real time based on the highest balance achieved (Peak Balance), including unrealized gains. It never moves downward.
 
-Intraday Trailing Drawdown Explained
+If the account balance touches or falls below the trailing threshold:
 
-2. No Prohibited Trading Activity
-You may not pass Evaluation Accounts by hedging them against each other. Evaluations must be completed using independent, directional trading, not offsetting positions across accounts.
+- All open positions are automatically liquidated
+- The evaluation is immediately failed
 
-All trading must follow Apex Trader Funding risk and conduct guidelines. Engaging in prohibited activities, including hedging violations or any form of rule circumvention, will result in immediate account closure.
+Because liquidation occurs at market price, the final balance after liquidation may appear slightly above or below the threshold depending on market conditions.
 
-Prohibited Activities
+Once the threshold is breached, the evaluation is considered failed regardless of the final fill price.
+
+
+Rule 2 — No Prohibited Trading Activity
+Evaluations must be traded using independent directional trading strategies.
+
+Hedging accounts against each other or attempting to circumvent the rules is prohibited.
+
+Any violation of Apex Trader Funding trading policies may result in immediate account closure.
+
+See: Prohibited Activities
+
 
 Frequently Asked Questions
-Can I pass the evaluation in one day?
-Yes. There is no minimum trading day requirement. As soon as the profit target is reached and no rules have been violated, the evaluation may be passed.
 
-Is there a Daily Loss Limit in this evaluation?
-No. The Intraday Evaluation does not have a Daily Loss Limit. Risk control is enforced entirely through the real-time trailing threshold.
+Can I pass the evaluation in one day?
+Yes. There is no minimum trading day requirement. As soon as the profit target is reached and all rules are followed, the evaluation may be passed.
+
+
+Is there a Daily Loss Limit?
+No. Intraday Trailing Evaluations do not have a Daily Loss Limit.
+
+Risk control is enforced entirely through the real-time trailing threshold.
+
 
 How does the Trailing Threshold work?
-The Trailing Threshold follows your highest achieved account balance (Peak Balance) in real time, including unrealized gains. As your balance increases, the threshold moves up. It never moves down.
+The trailing threshold follows the highest account balance reached (Peak Balance), including unrealized gains.
 
-If the account balance touches or falls below the threshold at any time, the evaluation fails immediately.
+As the balance increases, the threshold moves upward.
 
-What happens if the account closes slightly below the Trailing Threshold?
-Liquidations occur at market price. Depending on price movement and liquidity, the final filled balance may be slightly above or below the threshold.
+The threshold never moves downward.
 
-This does not change the fact that the threshold was breached. Once touched, the evaluation is considered failed.
 
-Does the Trailing Threshold reset each day?
-No. The threshold continues to trail the highest balance achieved during the evaluation and does not reset daily.
+What happens if my account closes slightly below the trailing threshold?
+Liquidations occur at market price, so the final balance may appear slightly above or below the threshold.
 
-What happens if I pass on the last day of my 30-day access?
-If the profit target is reached within the 30-day access period and all rules are respected, the evaluation will be marked as passed after market close. You will then have 7 calendar days to activate your Performance Account.
+However, once the threshold is touched, the evaluation is considered failed.
 
-Does the Trailing Threshold move downward on losing days?
-No. The Trailing Threshold only moves upward with your peak balance.
+
+Does the trailing threshold reset each day?
+No. The trailing threshold continues to follow the highest balance achieved during the evaluation and does not reset daily.
+
+
+What happens if I pass on the last day of the 30-day access period?
+If the profit target is reached within the 30-day access period and all rules are followed, the evaluation will be marked as passed after market close.
+
+You will then have 7 calendar days to activate your Performance Account.
+
+
+Does the trailing threshold move downward on losing days?
+No. The trailing threshold only moves upward with increases in peak balance.
+
 
 Can I extend the 30-day access period?
-No. The Intraday Evaluation provides 30 calendar days of access. Extensions are not offered.
+No. The Intraday Evaluation provides exactly 30 calendar days of access and extensions are not available.
 
-Does position size increase as my balance grows?
-No. Contract limits remain fixed throughout the Evaluation. They do not scale with profits.
 
-Why is there no consistency rule in the Evaluation?
-The Evaluation phase is designed to measure profitability under the trailing drawdown model. Consistency requirements are introduced later in the Performance Account phase.
+Does position size increase as profits grow?
+No. Contract limits remain fixed during the evaluation and do not scale with profits.
+
+
+Why is there no consistency rule during the evaluation?
+The evaluation phase focuses on profitability under the trailing drawdown model.
+
+Consistency requirements are introduced later during the Performance Account stage.
