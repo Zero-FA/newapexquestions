@@ -1,13 +1,34 @@
 const fs = require("fs");
 const path = require("path");
-const OpenAI = require("openai");
+const OpenAIImport = require("openai");
+
+const OpenAI = OpenAIImport.default || OpenAIImport;
+
+const FAQ_LINKS = {
+  "eod-payouts.txt": "",
+  "howto-request.txt": "",
+  "inter-payout-method.txt": "",
+  "intraday-payouts.txt": "",
+  "legacy-payout.txt": "",
+  "payout-method-info.txt": "",
+  "us-payout-method.txt": ""
+};
 
 function loadFaqs() {
   const faqDir = path.join(process.cwd(), "faqs");
 
+  if (!fs.existsSync(faqDir)) {
+    throw new Error(`FAQ folder missing: ${faqDir}`);
+  }
+
   const files = fs
     .readdirSync(faqDir)
-    .filter((file) => file.endsWith(".txt"));
+    .filter((file) => file.endsWith(".txt"))
+    .sort();
+
+  if (!files.length) {
+    throw new Error(`No .txt FAQ files found in: ${faqDir}`);
+  }
 
   let faqText = "";
 
@@ -15,24 +36,33 @@ function loadFaqs() {
     const filePath = path.join(faqDir, file);
     const content = fs.readFileSync(filePath, "utf8");
 
-    faqText += `\n\n### ${file}\n\n${content}\n`;
+    faqText += `\n\n### FILE: ${file}\n${content}\n`;
   }
 
   return faqText;
 }
 
 module.exports = async function handler(req, res) {
-
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-
   try {
-
-    const { question, model, temperature } = req.body;
+    if (req.method !== "POST") {
+      return res.status(200).json({
+        ok: true,
+        message: "API route is alive. Send a POST request."
+      });
+    }
 
     if (!process.env.OPENAI_API_KEY) {
-      throw new Error("Missing OPENAI_API_KEY");
+      throw new Error("Missing OPENAI_API_KEY environment variable");
+    }
+
+    const body = req.body || {};
+    const question = (body.question || "").trim();
+
+    if (!question) {
+      return res.status(400).json({
+        ok: false,
+        error: "Missing question"
+      });
     }
 
     const faqText = loadFaqs();
@@ -41,53 +71,72 @@ module.exports = async function handler(req, res) {
       apiKey: process.env.OPENAI_API_KEY
     });
 
-    const completion = await client.chat.completions.create({
-      model: model || "gpt-4.1-mini",
-      temperature: temperature ?? 0.2,
-
-      messages: [
+    const response = await client.responses.create({
+      model: "gpt-4.1-mini",
+      temperature: 0.2,
+      input: [
         {
           role: "system",
-          content: `
-You answer Apex Trader Funding payout questions.
+          content: [
+            {
+              type: "input_text",
+              text: `You are an Apex Trader Funding payout FAQ assistant.
 
-Rules:
-- Only answer using the FAQ documentation provided
-- Do NOT use outside knowledge
-- Do NOT guess
-- If the answer is not in the FAQ say:
-
-"I can't answer that from the provided Apex payout FAQs."
-
-Match the tone of the user's question.
-Keep answers clear and concise.
-`
+Follow these rules exactly:
+1. Answer ONLY using the FAQ documentation provided.
+2. Do NOT use outside knowledge.
+3. Do NOT guess, invent, or assume facts that are not clearly supported by the FAQs.
+4. If the FAQs do not clearly answer the question, respond exactly with:
+I can't answer that from the provided Apex payout FAQs.
+5. Match the tone and style of the user's question.
+6. Keep the answer clear, direct, and helpful.
+7. After the answer, add a final line in exactly this format:
+Source: <file name>
+8. Only name one source file, the best matching one.`,
+            },
+          ],
         },
         {
           role: "user",
-          content: `
-FAQ DOCUMENTATION:
+          content: [
+            {
+              type: "input_text",
+              text: `FAQ DOCUMENTATION:
 
 ${faqText}
 
 USER QUESTION:
-
 ${question}
-`
-        }
-      ]
+
+Answer using only the FAQ documentation above.`,
+            },
+          ],
+        },
+      ],
     });
 
-    const answer = completion.choices[0].message.content;
+    let answer =
+      (response.output_text && response.output_text.trim()) ||
+      "I can't answer that from the provided Apex payout FAQs.";
 
-    res.status(200).json({ answer });
+    const sourceMatch = answer.match(/Source:\\s*(.+)$/im);
+    let sourceFile = sourceMatch ? sourceMatch[1].trim() : "";
+    let sourceLink = sourceFile && FAQ_LINKS[sourceFile] ? FAQ_LINKS[sourceFile] : "";
 
-  } catch (err) {
+    if (sourceLink) {
+      answer += `\nLink: ${sourceLink}`;
+    }
 
-    console.error(err);
+    return res.status(200).json({
+      ok: true,
+      answer
+    });
+  } catch (error) {
+    console.error("ASK API ERROR:", error);
 
-    res.status(500).json({
-      error: err.message
+    return res.status(500).json({
+      ok: false,
+      error: error && error.message ? error.message : "Unknown server error"
     });
   }
 };
