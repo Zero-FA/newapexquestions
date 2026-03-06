@@ -1,0 +1,125 @@
+Tradovate Frequently Asked Questions
+If you encounter challenges with live data or other technical issues on Tradovate, it's essential to follow specific steps to resolve them effectively. Below is a detailed guide to troubleshoot live data problems and address the most commonly reported Tradovate errors.
+
+Why Is My Data Not Live on Tradovate?
+When using Tradovate, it’s crucial to ensure live market data is enabled. Follow these steps to address issues with live data:
+
+Log In to Tradovate
+Use the credentials provided and log in HERE.
+Sign Required Agreements
+Before attempting to connect to live data, complete the Non-Professional Agreement and other necessary documents. This step is mandatory and ensures smooth data activation.
+Data Activation Timeline
+The process can take between 10 and 90 minutes after signing the agreements, depending on user demand.
+Wait at least 90 minutes before submitting a Help Desk ticket.
+Instrument and Contract
+Ensure that you have loaded the correct instrument.
+Verify Data Status
+If your instruments appear orange, your data is delayed and not yet live.
+Do not place any trades until live market data is confirmed, as it may lead to significant losses.
+Monthly Data Cost 
+Expect monthly data fees exceeding $115 for users who do not sign the Non-professional agreement.
+ 
+Most Common Tradovate Errors and Their Solutions
+Below are frequently reported issues with Tradovate and step-by-step solutions:
+
+1. ERROR: Failed to Login – TradingView Not Entitled to Access Your Account
+
+Cause: You have not properly linked your TradingView account with Tradovate.
+Solution: After signing in to Tradovate, follow the detailed connection instructions provided HERE.
+2. Why is TradingView Charging Me $9.99 for an Add-On?
+
+Cause: You need to renew your free TradingView subscription monthly.
+Solution: Meet the eligibility requirements for free access, and remember to renew your subscription every 30 days. Review your subscription status and renewal date. For detailed guidance, click HERE.
+3. TradingView Keeps Going Down Monthly
+
+Cause: Subscription renewal is required every month.
+Solution: Reactivate your TradingView connection on the same day each month. The renewal date aligns with the day you initially set up your connection.
+4. No Live Data on the First of the Month
+
+Cause: Live data may not automatically activate on the first of the month.
+Solution: If it’s after 6 AM ET, submit a ticket to the Help Desk.
+5. Roll Forward Message – Contract Expiration
+
+Cause: You are attempting to trade an expiring contract.
+Solution:
+Research the correct front month for your instrument using the CME Group Markets tool.
+Understand the contract trading codes through CME Education.
+Roll contracts in a timely manner. For step-by-step instructions, visit this link.
+6. Error Message: "Liquidation Only – Contract Expired"
+
+Cause: Attempting to trade in an expired contract month.
+Solution:
+Research the current front month for the instrument.
+Roll contracts before expiration to avoid being locked into an expired position.
+Pay attention to contract roll warnings, as both NinjaTrader and Tradovate platforms provide alerts.
+7. Expired Positions – Unable to Close
+
+Cause: Positions in expired contracts cannot be closed externally.
+Solution:
+Tradovate automatically expires contracts at 9:30 AM ET on expiration day. Open positions remain until market close.
+Conduct proper due diligence and monitor expiration dates to avoid being trapped in expired positions.
+Preventive Measures for Tradovate Issues
+Stay Updated: Regularly check for updates or changes in policies on Tradovate and related tools like TradingView.
+Monitor Expiration Dates: Be proactive in rolling forward contracts before expiration to avoid interruptions in trading.
+Renew Subscriptions: Ensure your TradingView connection is reactivated monthly to maintain uninterrupted service.
+Frequently Asked Questions About Tradovate
+What Platforms Can I Use to Trade with a Tradovate Account?
+
+Tradovate accounts can be accessed via:
+NinjaTrader Desktop
+NinjaTrader Mobile App 
+Tradovate Web 
+Tradovate Desktop 
+Tradovate Mobile 
+TradingView Web
+TradingView Desktop
+TradingView Mobile 
+How Do I Access Tradovate Account Reports?
+
+Watch the tutorial below, which shows you where to locate your Tradovate Reports.
+
+
+For a detailed tutorial on accessing your Tradovate account dashboard and reports, read the article from the Tradovate Support Page HERE.
+Why Can’t I Connect to my Live Tradovate Account Using a NinjaTrader Key?
+
+You must download the latest version of NinjaTrader through the official portal. Follow the updated instructions provided -  CLICK HERE.
+Can I Use the Apex Trade Copier to Trade Simultaneously on Tradovate, Rithmic, and My Personal Broker Accounts?
+
+Yes, as long as the trade copier is connected to NinjaTrader. Ensure you have a paid NinjaTrader license key (purchased directly from NinjaTrader, or included in Apex accounts subscriptions).
+Is Tradovate Compatible with Various Devices?
+
+MAC: Yes.
+Web Browsers: Yes.
+Mobile, Tablet, and Chromebook: Yes, including Apple devices.
+Can I Use My Lifetime Key to Trade My Own Account, Rithmic, and Tradovate Simultaneously?
+
+Yes, you can use your own lifetime key to trade across these accounts concurrently.
+Can I Convert a Paid/Performance Account Between Tradovate and Rithmic?
+
+No, accounts cannot be transferred. You will need a new Paid/Performance Account (PA). Account days, balances, and history cannot be moved between Tradovate and Rithmic.
+Why Are My Orders Being Rejected on Tradovate?
+
+Verify your order size, including the number of contracts. Orders exceeding your account size will be rejected.
+Can I Use Coupons on Tradovate Plans?
+
+Yes, Apex Trader Funding coupons apply to Tradovate plans.
+Does the Apex Investing Institute Trade Copier Work with Tradovate and Rithmic?
+
+Yes, the trade copier works across Tradovate, Rithmic, and personal broker accounts when connected via NinjaTrader. It offers greater flexibility compared to Tradovate’s native "Groups" feature.
+Why is my account no longer showing after it was blown?
+
+Blown account(s) on Tradovate are automatically removed at the end of the trading day. Once removed, you will no longer have access to the trade history or the account itself.
+General Information About Tradovate
+Subscription Management:
+
+Add-ons like Order Flow +, VWAP, or Level 2 data must be purchased and managed through Tradovate or NinjaTrader, not Apex Trader Funding.
+
+Key Compatibility:
+
+Subscriptions and features for Tradovate accounts are not compatible with Rithmic accounts.
+
+Educational Support:
+
+Head to the Tradovate Website for comprehensive information about their platform using their FAQs and knowledge base.  
+
+By following these guidelines, you can maximize your use of Tradovate in conjunction with Apex Trader Funding.
