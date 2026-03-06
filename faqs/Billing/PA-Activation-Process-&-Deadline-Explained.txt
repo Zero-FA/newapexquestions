@@ -1,79 +1,148 @@
 PA Activation Process & Deadline Explained
-Passing an Evaluation gives you the opportunity to activate a PA of the same size and type as the Evaluation you passed.
 
-For example, passing a 50K EOD Evaluation provides the opportunity to activate a 50K EOD Performance Account. Passing a 50K Live Intraday Trailing Evaluation provides the opportunity to activate a 50K Live Intraday Trailing PA.
+Overview
+Passing an Evaluation gives you the opportunity to activate a Performance Account (PA) of the same size and type as the Evaluation you passed.
 
-After passing the evaluation
-Once you reach the profit target and satisfy all Evaluation requirements, your account is reviewed at market close (4:59:59 PM ET).
+Examples:
+- Passing a 50K EOD Evaluation allows you to activate a 50K EOD Performance Account.
+- Passing a 50K Live Intraday Trailing Evaluation allows you to activate a 50K Live Intraday Trailing Performance Account.
 
-If the target profit is reported as reached, the Evaluation is then marked as Passed after market close on that day, and will appear in the Passed Evals section of your dashboard after 6 PM ET. At that point, the Passed Evaluation becomes eligible to activate your Performance Account.
+
+After Passing the Evaluation
+Once you reach the profit target and satisfy all Evaluation requirements:
+
+- Your account is reviewed at market close (4:59:59 PM ET).
+- If the profit target is confirmed, the Evaluation is marked as Passed.
+- The account will appear in the "Passed Evals" section of your dashboard after 6 PM ET.
+
+Once the Evaluation is marked as Passed, it becomes eligible for Performance Account activation.
+
 
 Activation Window
-You have 7 calendar days from the moment the Evaluation is marked as Passed to complete the PA Activation Fee. The 7-day period begins on the date the account is officially marked as Passed after market close, not when the profit target is reached during the trading session.
+You have 7 calendar days to complete the PA Activation Fee.
 
-For example:
+Important details:
 
-The profit target is reached at 9:00 PM ET on a Tuesday, the 19th (which is part of Wednesday’s trading session)
-The Evaluation will not be marked as Passed until after the end of the trading session when the market closes, which in this scenario would be Wednesday the 20th, after 6 PM ET
-The 7-day activation period would start on Wednesday
-The last date to activate would be the following Wednesday the 27th by 11:59 PM ET.
-If your evaluation is marked as Passed on the final day of your Evaluation access (Day 30), you will still receive the full 7 calendar days to activate your PA even though your original Evaluation access period will have expired.
-
-If the activation fee is not completed before midnight of the 7th calendar day after the evaluation is marked as Passed, the activation opportunity expires and cannot be reinstated. A new Evaluation must be passed to qualify again.
-
-An email notification may be sent once your Evaluation is marked as Passed, but this email is informational only, as activation is completed directly from your dashboard.
-
-How to Activate your PA
-To activate your PA, complete the one-time PA activation fee using the Purchase PA link in your Passed Evals tab.
+- The 7-day window begins when the Evaluation is officially marked as Passed after market close.
+- The activation window does NOT start when the profit target is reached during the trading session.
+- The activation opportunity expires permanently if the activation fee is not completed within the 7-day window.
 
 
-After payment:
+Activation Timeline Example
+Example scenario:
 
-The PA is created using the same login credentials as your Evaluation.
-Account creation can take up to 6 hours.
-The automated process begins only after market close on the day you pass. Please allow the full processing window before contacting Support.
+- The profit target is reached at 9:00 PM ET on Tuesday the 19th (which is part of Wednesday’s trading session).
+- The Evaluation is not marked as Passed until after the market closes the following day.
+- In this example, the Evaluation would be marked as Passed on Wednesday the 20th after 6 PM ET.
+- The 7-day activation window begins on Wednesday the 20th.
+- The final deadline to activate the PA would be Wednesday the 27th at 11:59 PM ET.
+
+
+Passing on the Final Day
+If your Evaluation is marked as Passed on the final day of your 30-day Evaluation access period:
+
+- You will still receive the full 7 calendar days to activate your PA.
+- The original Evaluation account itself may expire, but the activation window remains valid.
+
+
+Activation Expiration
+If the PA activation fee is not completed before midnight on the 7th calendar day after the Evaluation is marked as Passed:
+
+- The activation opportunity expires permanently.
+- The activation cannot be reinstated.
+- To qualify again, you must pass a new Evaluation.
+
+
+Notification
+An email notification may be sent once your Evaluation is marked as Passed.
+
+This email is informational only. Activation is completed directly through your dashboard.
+
+
+How to Activate Your Performance Account
+To activate your Performance Account:
+
+1. Go to the "Passed Evals" section of your dashboard.
+2. Click the "Purchase PA" link.
+3. Complete the one-time PA Activation Fee.
+
+
+After Payment
+After the activation fee is completed:
+
+- The Performance Account will be created using the same login credentials as the Evaluation.
+- Account creation may take up to 6 hours.
+- The automated account creation process begins after market close on the day you pass.
+
+Please allow the full processing window before contacting Support.
 
 If the Purchase PA link is not visible after two full calendar days, you may submit a support ticket.
 
+
 PA Activation Fees (All Platforms)
-The PA Activation Fee is a one-time payment per account. It is not a subscription and does not renew. The fee applies only to the specific Performance Account being activated and cannot be transferred, reassigned, or reversed.
+The PA Activation Fee is a one-time payment per account.
 
-The activation remains valid for as long as the Performance Account remains active.
+Important details:
 
-If a PA is disqualified, liquidated, or closed due to inactivity, the account is permanently closed and market data access is revoked. A new Evaluation must be passed to obtain another Performance Account.
+- The activation fee is not a subscription.
+- The fee does not renew.
+- The activation fee applies only to the specific Performance Account being activated.
+- The activation fee cannot be transferred, reassigned, refunded, or reversed.
 
- 
+Once activated, the Performance Account remains valid as long as the account stays active.
 
-FAQs
+If a Performance Account is disqualified, liquidated, or closed due to inactivity:
+
+- The account is permanently closed.
+- Market data access is revoked.
+- A new Evaluation must be passed to receive another Performance Account.
+
+
+Frequently Asked Questions
+
 What happens if I do not activate my PA within 7 days?
-If the activation fee is not completed within 7 calendar days of the Evaluation being marked as Passed, the activation link expires permanently. The opportunity cannot be reinstated. You must pass a new Evaluation to qualify again.
+If the activation fee is not completed within 7 calendar days after the Evaluation is marked as Passed, the activation link expires permanently. The opportunity cannot be reinstated. You must pass a new Evaluation to qualify again.
+
 
 Does the 7-day window start when I hit the profit target?
-No. The 7-day activation period begins when the Evaluation is officially marked as Passed after market reopens at 6PM ET, not when the profit target is reached intraday.
+No. The activation window begins when the Evaluation is officially marked as Passed after market close (after 6 PM ET), not when the profit target is reached during trading.
+
 
 What if I pass on the last day of my Evaluation?
-You will still receive the full 7 calendar days to activate your PA, even if the original Evaluation access period itself expires. You will not be able to see the passed expired evaluation on your trading platform, but you will be able to see it on your dashboard.
+You will still receive the full 7 calendar days to activate your Performance Account even if the original Evaluation access period expires. The passed Evaluation may not appear in the trading platform but will remain visible in your dashboard.
+
 
 Is the PA Activation Fee a subscription?
-No. The activation fee is a one-time payment per account. It does not renew monthly, there is no need to cancel it.
+No. The activation fee is a one-time payment per account. It does not renew monthly and does not require cancellation.
+
 
 Is the PA Activation Fee refundable?
-No, the activation fee is a one-time payment and is not refundable, transferable, or reversible.
+No. The activation fee is a one-time payment and is not refundable, transferable, or reversible.
+
 
 Can I transfer my activation to another account size?
-No. The activation applies only to the specific Evaluation that was passed and matches the size and type of that Evaluation.
+No. The activation applies only to the specific Evaluation that was passed and must match the size and type of that Evaluation.
+
 
 What happens after I pay the activation fee?
-Your Performance Account will be created, and will be accessible using the same login credentials as your Evaluation. Account creation may take up to 6 hours.
+Your Performance Account will be created and will use the same login credentials as your Evaluation. Account creation may take up to 6 hours.
+
 
 I paid but do not see my PA. What should I do?
-Please allow up to 6 hours for account creation. Contact Support only if the account has not appeared after the full processing window. Accounts purchased or activated after Friday market close will not get created until Sunday 6PM ET.
+Please allow up to 6 hours for account creation. Contact Support only if the account has not appeared after the full processing window.
+
+Accounts activated after Friday market close will not be created until Sunday at 6 PM ET.
+
 
 I passed but do not see the Purchase PA link.
-The conversion process begins after market reopens at 6PM ET on the day you pass. If the Purchase PA link is still missing after two full calendar days, you may submit a support ticket.
+The conversion process begins after market reopens at 6 PM ET on the day you pass.
+
+If the Purchase PA link is still missing after two full calendar days, you may submit a support ticket.
+
 
 Can I extend the 7-day activation period?
 No. The activation window cannot be extended under any circumstances.
 
+
 If my PA is later disqualified, do I need to pay again?
-Yes. If a Performance Account is disqualified, liquidated, or closed, a new Evaluation must be passed and a new activation fee paid to receive another PA.
+Yes. If a Performance Account is disqualified, liquidated, or closed, you must pass a new Evaluation and pay a new activation fee to receive another Performance Account.
