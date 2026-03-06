@@ -204,23 +204,24 @@
     }
 
     .bubble.source {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--panel3);
-      width: auto;
+      background: transparent;
+      width: fit-content;
       min-width: 0;
-      max-width: 100%;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border-bottom-left-radius: 999px;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
     }
 
     .source-link {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
       color: var(--accent);
       text-decoration: none;
       font-weight: 700;
       line-height: 1.35;
+      white-space: nowrap;
     }
 
     .source-link:hover {
@@ -312,48 +313,29 @@
         .replace(/'/g, "&#39;");
     }
 
-    function buildQuestionVariants(question) {
-      const normalized = question
-        .toLowerCase()
-        .replace(/[^a-z0-9\s]/g, " ")
-        .replace(/maen/g, "mean")
-        .replace(/\s+/g, " ")
-        .trim();
+    function isNoAnswerResponse(answer) {
+      const text = String(answer || "").trim().toLowerCase();
+      if (!text) return true;
 
-      const variants = new Set([question, normalized]);
-
-      if (normalized.includes("under review")) {
-        variants.add("what does under review mean");
-        variants.add("under review meaning");
-        variants.add("payout under review");
-        variants.add("review status meaning");
-      }
-
-      return Array.from(variants).filter(Boolean);
-    }
-
-    function shouldShowSource(data) {
-      const answer = String(data?.answer || "").toLowerCase();
-      const hasSource = Boolean(data?.sourceUrl || data?.sourceTitle || data?.sourceFile);
-
-      if (!hasSource) return false;
-
-      const notFoundSignals = [
-        "i couldn't find",
-        "i could not find",
-        "i cant find",
-        "i can't find",
+      const patterns = [
+        "i can't answer",
+        "i cant answer",
+        "cannot answer",
+        "can't answer",
+        "couldn't find",
+        "could not find",
         "not found",
         "no answer found",
-        "no matching",
-        "couldn't locate",
-        "could not locate",
+        "no relevant answer",
+        "no matching faq",
+        "i do not know",
+        "i don't know",
         "unable to find",
-        "don't have enough information",
-        "do not have enough information"
+        "not in the provided apex faqs",
+        "from the provided apex faqs"
       ];
 
-      return !notFoundSignals.some((signal) => answer.includes(signal));
+      return patterns.some((pattern) => text.includes(pattern));
     }
 
     async function askQuestion() {
@@ -384,13 +366,7 @@
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify({
-            question,
-            questionVariants: buildQuestionVariants(question),
-            retrievalMode: "keyword_then_narrow",
-            preferBestModel: true,
-            model: "gpt-5"
-          })
+          body: JSON.stringify({ question })
         });
 
         const raw = await res.text();
@@ -406,16 +382,15 @@
           throw new Error(data.error || "Request failed");
         }
 
-        answerBox.textContent = data.answer || "No answer returned.";
+        const answerText = data.answer || "No answer returned.";
+        const shouldHideSource = isNoAnswerResponse(answerText);
 
-        if (shouldShowSource(data) && data.sourceUrl) {
+        answerBox.textContent = answerText;
+
+        if (!shouldHideSource && data.sourceUrl) {
           sourceWrap.style.display = "flex";
-          sourceBox.innerHTML = `
-            <a class="source-link" href="${escapeHtml(data.sourceUrl)}" target="_blank" rel="noopener noreferrer">
-              ${escapeHtml(data.sourceTitle || data.sourceFile || data.sourceUrl)}
-            </a>
-          `;
-        } else if (shouldShowSource(data) && (data.sourceTitle || data.sourceFile)) {
+          sourceBox.innerHTML = `<a class="source-link" href="${escapeHtml(data.sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(data.sourceTitle || data.sourceFile || data.sourceUrl)}</a>`;
+        } else if (!shouldHideSource && (data.sourceTitle || data.sourceFile)) {
           sourceWrap.style.display = "flex";
           sourceBox.textContent = data.sourceTitle || data.sourceFile;
         } else {
