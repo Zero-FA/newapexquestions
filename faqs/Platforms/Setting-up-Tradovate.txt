@@ -1,0 +1,46 @@
+Setting up Tradovate
+After you have purchased your first Tradovate account and received your Tradovate login credentials, go to the Tradovate welcome page. Use your desktop browser, NOT the app. Sign in with your Tradovate username and password.
+
+Note: Account creation, resets, and Performance Accounts may take longer than expected during times of high volume and market volatility. 
+
+We appreciate your patience.  If you have not received your account after six hours from the time you ordered your account, please submit a help desk ticket.
+
+Depending on user demand, activating the data may take 10 to 90 minutes after you sign the data agreements. 
+
+Don't send a help desk ticket regarding the lack of live data until at least 90 minutes have elapsed since signing the data agreements.
+
+Login Credentials
+
+
+NOTE: Make sure your username and password do not contain spaces, including at the beginning and end.
+
+
+
+ 
+
+Fill out your information and sign the document. 
+
+Select NON PROFESSIONAL
+
+
+
+ 
+
+You will find your accounts under the Simulation section. Click Launch.
+
+
+
+ 
+
+This is your Tradovate dashboard, where you will find your account.
+
+
+
+ 
+
+To learn more about the Tradovate Dashboard and how to set up your chart/dashboard, visit their support page HERE.
+
+ 
+
+Trading Directly on Tradovate
+After your data is activated, you can trade directly on trader.tradovate.com.
