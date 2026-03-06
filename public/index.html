@@ -105,6 +105,31 @@
       line-height: 1.7;
     }
 
+    .source-box {
+      margin-top: 14px;
+      padding: 12px 14px;
+      background: #0d142b;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      line-height: 1.6;
+    }
+
+    .source-label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .source-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .source-link:hover {
+      text-decoration: underline;
+    }
+
     .row {
       display: flex;
       flex-wrap: wrap;
@@ -191,6 +216,7 @@
         </div>
         <div class="card-body">
           <div id="answerBox">Your answer will appear here.</div>
+          <div id="sourceBox" class="source-box" style="display:none;"></div>
         </div>
       </section>
     </div>
@@ -201,19 +227,33 @@
     const clearBtn = document.getElementById("clearBtn");
     const questionInput = document.getElementById("questionInput");
     const answerBox = document.getElementById("answerBox");
+    const sourceBox = document.getElementById("sourceBox");
     const status = document.getElementById("status");
+
+    function escapeHtml(value) {
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
 
     async function askQuestion() {
       const question = questionInput.value.trim();
 
       if (!question) {
         answerBox.textContent = "Please enter a question first.";
+        sourceBox.style.display = "none";
+        sourceBox.innerHTML = "";
         status.innerHTML = '<span class="warn">No question entered.</span>';
         return;
       }
 
       answerBtn.disabled = true;
       answerBox.textContent = "Thinking...";
+      sourceBox.style.display = "none";
+      sourceBox.innerHTML = "";
       status.textContent = "Sending question...";
 
       try {
@@ -222,9 +262,7 @@
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify({
-            question
-          })
+          body: JSON.stringify({ question })
         });
 
         const raw = await res.text();
@@ -241,10 +279,29 @@
         }
 
         answerBox.textContent = data.answer || "No answer returned.";
+
+        if (data.sourceUrl) {
+          sourceBox.style.display = "block";
+          sourceBox.innerHTML = `
+            <div class="source-label">Source</div>
+            <a class="source-link" href="${escapeHtml(data.sourceUrl)}" target="_blank" rel="noopener noreferrer">
+              ${escapeHtml(data.sourceTitle || data.sourceFile || data.sourceUrl)}
+            </a>
+          `;
+        } else if (data.sourceTitle || data.sourceFile) {
+          sourceBox.style.display = "block";
+          sourceBox.innerHTML = `
+            <div class="source-label">Source</div>
+            <div>${escapeHtml(data.sourceTitle || data.sourceFile)}</div>
+          `;
+        }
+
         status.innerHTML = '<span class="good">Done.</span>';
       } catch (err) {
         console.error(err);
         answerBox.textContent = "API error: " + err.message;
+        sourceBox.style.display = "none";
+        sourceBox.innerHTML = "";
         status.innerHTML = '<span class="warn">API request failed.</span>';
       } finally {
         answerBtn.disabled = false;
@@ -262,6 +319,8 @@
     clearBtn.addEventListener("click", () => {
       questionInput.value = "";
       answerBox.textContent = "Your answer will appear here.";
+      sourceBox.style.display = "none";
+      sourceBox.innerHTML = "";
       status.textContent = "Ready.";
       questionInput.focus();
     });
